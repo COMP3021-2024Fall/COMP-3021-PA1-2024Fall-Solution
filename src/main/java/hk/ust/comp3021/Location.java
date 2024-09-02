@@ -13,4 +13,12 @@ public class Location {
         this.altitude = Double.valueOf(altitude);
     }
 
+    public Double distanceTo(Location location) {
+        return Math.sqrt(Math.pow(this.latitude - location.latitude, 2) + Math.pow(this.altitude - location.altitude, 2));
+    }
+
+    public static Double distanceBetween(Location location1, Location location2) {
+        return Math.sqrt(Math.pow(location1.latitude - location2.latitude, 2) + Math.pow(location1.altitude - location2.altitude, 2));
+    }
+
 }

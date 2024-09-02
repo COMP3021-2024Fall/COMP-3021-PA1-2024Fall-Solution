@@ -16,9 +16,9 @@ public class Constants {
     public static final String ACCOUNT_RIDER = "RIDER";
 
     /// Customer constants.
-    public static final Integer NORMAL_CUSTOMER = 1;
+    public static final Integer VIP_CUSTOMER = 1;
 
-    public static final Integer VIP_CUSTOMER = 2;
+    public static final Integer NORMAL_CUSTOMER = 2;
 
     /// Rider constants.
     // Not ready to dispatch orders.

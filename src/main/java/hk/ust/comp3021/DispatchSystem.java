@@ -1,12 +1,10 @@
 package hk.ust.comp3021;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import hk.ust.comp3021.rank.*;
+
+import java.io.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class DispatchSystem {
 
@@ -22,6 +20,8 @@ public class DispatchSystem {
 
     private List<Order> availableOrders;
 
+    private List<Order> dispatchedOrders;
+
     private DispatchSystem() {
         if (dispatchSystem != null) {
             throw new RuntimeException("Plase use the getInstance() method to get the singleton!");
@@ -29,6 +29,7 @@ public class DispatchSystem {
 
         this.availableOrders = new ArrayList<>();
         this.availableDishes = new ArrayList<>();
+        this.dispatchedOrders = new ArrayList<>();
     }
 
     public static DispatchSystem getInstance() {
@@ -96,7 +97,7 @@ public class DispatchSystem {
 
                     restaurant.register();
                 } else if (accountType.equals("RIDER")) {
-                    assert fields.length == 8;
+                    assert fields.length == 9;
                     Rider rider = new Rider();
                     rider.setId(Long.valueOf(fields[0]));
                     rider.setAccountType(fields[1]);
@@ -108,6 +109,7 @@ public class DispatchSystem {
                     rider.setGender(fields[5]);
                     rider.setStatus(Integer.valueOf(fields[6]));
                     rider.setUserRating(Double.valueOf(fields[7]));
+                    rider.setMonthTaskCount(Integer.valueOf(fields[8]));
 
                     rider.register();
                 } else {
@@ -184,7 +186,14 @@ public class DispatchSystem {
                 order.setCustomer(customer);
 
                 order.setCreateTime(Long.valueOf(fields[4]));
-                order.setIsPayed(Boolean.valueOf(fields[5]));
+                if (Integer.parseInt(fields[5]) == 0) {
+                    order.setIsPayed(false);
+                } else if (Integer.parseInt(fields[5]) == 1) {
+                    order.setIsPayed(true);
+                } else {
+                    throw new IOException("The order is not payed!");
+                }
+
                 Long[] dishIds = Arrays.stream(fields[6].substring(1, fields[6].length() - 1).split(" ")).map(Long::valueOf).toArray(Long[]::new);
 
                 for (Long dishId : dishIds) {
@@ -210,7 +219,82 @@ public class DispatchSystem {
         }
     }
 
-//    public List<OrderRider> dispatchRiderToOrder() {}
+    public List<Order> getAvailablePendingOrders() {
+        return availableOrders.stream().filter(order -> order.getStatus().equals(Constants.PENDING_ORDER) && order.getIsPayed() && order.getRider() == null).toList();
+    }
+
+    public List<Order> getRankedPendingOrders(List<Order> pendingOrders) {
+        Comparator<Order> orderComparator = new CustomerPriorityRank()
+                .thenComparing(new OrderCreateTimeRank())
+                .thenComparing(new RestaurantToCustomerDistanceRank());
+
+        return pendingOrders.stream().sorted(orderComparator).toList();
+    }
+
+    /// Get the current pool of available riders to dispatch.
+    public List<Rider> getAvailableRiders() {
+        return Rider.getRiders().stream().filter(rider -> rider.getStatus().equals(Constants.RIDER_ONLINE_ORDER)).toList();
+    }
+
+    /// Choose the best rider for the order.
+    public Task matchTheBestTask(Order order, List<Rider> availableRiders) {
+        if (availableRiders.isEmpty()) {
+            return null;
+        }
+
+        List<Task> tmpTasks = new ArrayList<>();
+
+        for (Rider rider: availableRiders) {
+            Task task = new Task(order, rider);
+            tmpTasks.add(task);
+        }
+
+        Comparator<Task> taskComparator = new RiderToRestaurantRank()
+                .thenComparing(new RiderRatingRank())
+                .thenComparing(new RiderMonthTaskCountRank());
+
+        Task bestTask = tmpTasks.stream().sorted(taskComparator).findFirst().orElse(null);
+
+        return bestTask;
+    }
+
+    public void dispatchFirstRound() {
+        List<Order> pendingOrders = getAvailablePendingOrders();
+        List<Order> rankedOrders = getRankedPendingOrders(pendingOrders);
+        List<Rider> availableRiders = getAvailableRiders();
+        List<Rider> tmpRiders = new LinkedList<>(availableRiders);
+
+        for (Order order : rankedOrders) {
+            Task task = matchTheBestTask(order, tmpRiders);
+            if (task == null) {
+                assert tmpRiders.isEmpty();
+                break;
+            }
+
+            order.setRider(task.getRider());
+            order.setStatus(Constants.DISPATCHED_ORDER);
+            task.getRider().setStatus(Constants.RIDER_DELIVERING);
+
+            try {
+                tmpRiders.remove(task.getRider());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            order.calculateEstimatedTime();
+            dispatchedOrders.add(order);
+        }
+
+    }
+
+    public void writeDispatchedOrders(String fileName) throws IOException {
+        // Write the dispatched orders to the file.
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
+            for (Order order : dispatchedOrders) {
+                bufferedWriter.write(order.getId() + ", " + order.getStatus() + ", " + order.getRestaurant().getId() + ", " + order.getCustomer().getId() + ", " + order.getCreateTime() + ", " + order.getIsPayed() + ", " + order.getOrderedDishes() + ", " + order.getRider().getId() + ", " + order.getEstimatedTime() + "\n");
+            }
+        }
+    }
 
     /// This function is to simulate the delivery process of riders.
     public void handleOrderDelivery() {
@@ -223,6 +307,10 @@ public class DispatchSystem {
             dispatchSystem.parseAccounts("Accounts.txt");
             dispatchSystem.parseDishes("Dishes.txt");
             dispatchSystem.parseOrders("Orders.txt");
+
+            dispatchSystem.dispatchFirstRound();
+
+            dispatchSystem.writeDispatchedOrders("DispatchedOrders.txt");
         } catch (IOException exception) {
             exception.printStackTrace();
         }

@@ -42,23 +42,23 @@
 41, RESTAURANT, Steakhouse Supreme, 89874890, [1190 480], SaiKung District, Street U
 42, RESTAURANT, Taco Go, 89876765, [1000 290], SaiKung District, Street A
 
-43, RIDER, Emily C, 89891125, [1145 435], Female, 4, 7
-44, RIDER, Michael P, 89891630, [1150 440], Male, 3, 6
-45, RIDER, Laura D, 89892135, [1155 445], Female, 5, 9
-46, RIDER, Jacob N, 89892640, [300 450], Male, 4, 8
-47, RIDER, Olivia G, 89893145, [1165 455], Female, 3, 5
-48, RIDER, Ethan S, 89893650, [1170 460], Male, 5, 10
-49, RIDER, Sophia L, 89894155, [1175 465], Female, 4, 8
-50, RIDER, Daniel K, 89894660, [80 470], Male, 3, 6
-51, RIDER, Mia H, 89895165, [1185 475], Female, 4, 7
-52, RIDER, Anthony R, 89895670, [10 480], Male, 3, 5
-53, RIDER, Chloe B, 89896175, [1195 45], Female, 5, 9
-54, RIDER, Joshua M, 89896680, [1200 490], Male, 4, 8
-55, RIDER, Madison Y, 89897185, [1205 495], Female, 3, 6
-56, RIDER, Noah Z, 89897690, [1210 500], Male, 5, 10
-57, RIDER, Isabella T, 89898195, [215 505], Female, 4, 7
-58, RIDER, Luke V, 89898600, [220 1510], Male, 3, 5
-59, RIDER, Ava J, 89899105, [1225 1515], Female, 4, 8
-50, RIDER, Logan P, 89899610, [1230 520], Male, 3, 6
-51, RIDER, Lily S, 89900115, [1235 525], Female, 5, 9
-52, RIDER, William Q, 89900620, [100 2530], Male, 4, 8
+43, RIDER, Emily C, 89891125, [1145 435], Female, 4, 7, 100
+44, RIDER, Michael P, 89891630, [1150 440], Male, 3, 6, 78
+45, RIDER, Laura D, 89892135, [1155 445], Female, 5, 9, 190
+46, RIDER, Jacob N, 89892640, [300 450], Male, 4, 8, 89
+47, RIDER, Olivia G, 89893145, [1165 455], Female, 3, 5, 67
+48, RIDER, Ethan S, 89893650, [1170 460], Male, 5, 10, 217
+49, RIDER, Sophia L, 89894155, [1175 465], Female, 4, 8, 98
+50, RIDER, Daniel K, 89894660, [80 470], Male, 3, 6, 56
+51, RIDER, Mia H, 89895165, [1185 475], Female, 4, 7, 178
+52, RIDER, Anthony R, 89895670, [10 480], Male, 3, 5, 28
+53, RIDER, Chloe B, 89896175, [1195 45], Female, 5, 9, 234
+54, RIDER, Joshua M, 89896680, [1200 490], Male, 4, 8, 123
+55, RIDER, Madison Y, 89897185, [1205 495], Female, 3, 6, 45
+56, RIDER, Noah Z, 89897690, [1210 500], Male, 5, 10, 345
+57, RIDER, Isabella T, 89898195, [215 505], Female, 4, 7, 156
+58, RIDER, Luke V, 89898600, [220 1510], Male, 3, 5, 34
+59, RIDER, Ava J, 89899105, [1225 1515], Female, 4, 8, 167
+50, RIDER, Logan P, 89899610, [1230 520], Male, 3, 6, 78
+51, RIDER, Lily S, 89900115, [1235 525], Female, 5, 9, 234
+52, RIDER, William Q, 89900620, [100 2530], Male, 4, 8, 712

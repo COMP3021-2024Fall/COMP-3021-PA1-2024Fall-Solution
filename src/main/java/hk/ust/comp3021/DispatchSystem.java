@@ -13,10 +13,13 @@ public class DispatchSystem {
     /// The field represents the current time stamp, we assume the current time stamp is 3600 seconds.
     private Long currentTimestamp = 3600L;
 
+    /// The list stores the dishes parsed from the file.
     private List<Dish> availableDishes;
 
+    /// The list stores the orders parsed from the file.
     private List<Order> availableOrders;
 
+    /// The list stores the orders that is dispatched this time, and the orders should have a non-null rider field and calculated estimated time.
     private List<Order> dispatchedOrders;
 
     private DispatchSystem() {
@@ -29,6 +32,8 @@ public class DispatchSystem {
         this.dispatchedOrders = new ArrayList<>();
     }
 
+    /// Task 1: Implement the getInstance() method for the singleton pattern.
+    /// Hint: Try to make it thread-safe.
     public static DispatchSystem getInstance() {
         if (dispatchSystem == null) {
             synchronized (DispatchSystem.class) {
@@ -45,6 +50,16 @@ public class DispatchSystem {
         return availableDishes.stream().filter(dish -> dish.getId().equals(id)).findFirst().orElse(null);
     }
 
+    public Boolean checkDishesInRestaurant(Restaurant restaurant, Long[] dishIds) {
+        List<Long> restaurantDishIds = new ArrayList<>(restaurant.getDishes().stream().map(Dish::getId).toList());
+
+        restaurantDishIds.retainAll(new ArrayList<>(List.of(dishIds)));
+
+        return new HashSet<>(restaurantDishIds).containsAll(List.of(dishIds));
+    }
+
+    /// Task 2: Implement the parseAccounts() method to parse the accounts from the file.
+    /// Hint: Do not forget to register the accounts into the static manager.
     public void parseAccounts(String fileName) throws IOException {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             // Read the file and parse the accounts.
@@ -116,6 +131,8 @@ public class DispatchSystem {
         }
     }
 
+    /// Task 3: Implement the parseDishes() method to parse the dishes from the file.
+    /// Hint: Do not forget to add the dishes to the corresponding restaurant and the availableDishes list.
     public void parseDishes(String fileName) throws IOException {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             // Read the file and parse the dishes.
@@ -150,6 +167,8 @@ public class DispatchSystem {
         }
     }
 
+    /// Task 4: Implement the parseOrders() method to parse the orders from the file.
+    /// Hint: Do not forget to add the order to the availableOrders list and check if the dishes ordered are in the same restaurant. You can use getDishById(), checkDishesInRestaurant(), and etc. here.
     public void parseOrders(String fileName) throws IOException {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             // Read the file and parse the orders.
@@ -219,18 +238,14 @@ public class DispatchSystem {
         }
     }
 
-    public Boolean checkDishesInRestaurant(Restaurant restaurant, Long[] dishIds) {
-        List<Long> restaurantDishIds = new ArrayList<>(restaurant.getDishes().stream().map(Dish::getId).toList());
-
-        restaurantDishIds.retainAll(new ArrayList<>(List.of(dishIds)));
-
-        return new HashSet<>(restaurantDishIds).containsAll(List.of(dishIds));
-    }
-
+    /// Task 5: Implement the getAvailablePendingOrders() method to get the available pending orders.
+    /// Hint: The available pending orders should have the status of PENDING_ORDER, is payed, and the rider is null.
     public List<Order> getAvailablePendingOrders() {
         return availableOrders.stream().filter(order -> order.getStatus().equals(Constants.PENDING_ORDER) && order.getIsPayed() && order.getRider() == null).toList();
     }
 
+    /// Task 6: Implement the getRankedPendingOrders() method to rank the pending orders.
+    /// Hint: Use the comparators you defined before, and sort the pending orders in order of the customer type, order create time, and restaurant to customer distance.
     public List<Order> getRankedPendingOrders(List<Order> pendingOrders) {
         Comparator<Order> orderComparator = new CustomerPriorityRank()
                 .thenComparing(new OrderCreateTimeRank())
@@ -239,12 +254,15 @@ public class DispatchSystem {
         return pendingOrders.stream().sorted(orderComparator).toList();
     }
 
-    /// Get the current pool of available riders to dispatch.
+    /// Task 7: Implement the getAvailableRiders() method to get the available riders to dispatch.
+    /// Hint: The available riders should have the status of RIDER_ONLINE_ORDER.
     public List<Rider> getAvailableRiders() {
         return Rider.getRiders().stream().filter(rider -> rider.getStatus().equals(Constants.RIDER_ONLINE_ORDER)).toList();
     }
 
-    /// Choose the best rider for the order.
+    /// Task 8: Implement the matchTheBestTask() method to choose the best rider for the order.
+    /// Hint: The best rider should have the highest rank ranked in order of the distance between the rider and the restaurant, the rider's rating, and the rider's month task count.
+    /// Use the comparators you defined before and you will use the Task class here.
     public Task matchTheBestTask(Order order, List<Rider> availableRiders) {
         if (availableRiders.isEmpty()) {
             return null;
@@ -265,6 +283,9 @@ public class DispatchSystem {
         return tmpTaskList.stream().findFirst().orElse(null);
     }
 
+    /// Task 9: Implement the dispatchFirstRound() method to dispatch the first round of orders.
+    /// Hint: The strategy is that we assign the best rider to the orders ranked one by one until the orders or riders list is empty.
+    /// Do not forget to change the status of the order and the rider, and calculate the estimated time for the order.
     public void dispatchFirstRound() {
         List<Order> pendingOrders = getAvailablePendingOrders();
         List<Order> rankedOrders = getRankedPendingOrders(pendingOrders);
@@ -294,6 +315,7 @@ public class DispatchSystem {
 
     }
 
+    /// You should use the method to output orders for us to check the correctness of your implementation.
     public void writeOrders(String fileName, List<Order> orders) throws IOException {
         // Write the dispatched orders to the file.
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
@@ -305,10 +327,13 @@ public class DispatchSystem {
         }
     }
 
+    /// Task 10: Implement the getTimeoutDispatchedOrders() method to get the timeout dispatched orders.
+    /// Hint: Do not forget to take the current time stamp into consideration.
     public List<Order> getTimeoutDispatchedOrders() {
         return dispatchedOrders.stream().filter(order -> (order.getEstimatedTime() + currentTimestamp - order.getCreateTime()) > Constants.DELIVERY_TIME_LIMIT).toList();
     }
 
+    /// Finish the main method to test your implementation.a
     public static void main(String[] args) {
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
@@ -327,7 +352,6 @@ public class DispatchSystem {
             exception.printStackTrace();
         }
 
-        Account.AccountManager accountManager = Account.getAccountManager();
     }
 
 }

@@ -20,7 +20,6 @@ public class Order {
 
     private Boolean isPayed;
 
-    // TODO: Remember to filter the list when reading from file.
     private List<Dish> orderedDishes;
 
     /// Make it null when not dispatched.

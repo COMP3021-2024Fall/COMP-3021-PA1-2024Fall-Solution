@@ -5,7 +5,6 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Data
 public abstract class Account {
 
     protected Long id;
@@ -18,6 +17,7 @@ public abstract class Account {
 
     protected Location location;
 
+    /// This is where the registered accounts are stored.
     @Data
     protected static class AccountManager {
 

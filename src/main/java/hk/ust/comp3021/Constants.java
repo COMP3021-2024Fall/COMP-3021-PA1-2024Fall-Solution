@@ -40,7 +40,4 @@ public class Constants {
     // The order is completed.
     public static final Integer COMPLETED_ORDER = 8;
 
-    /// Customer constants.
-    /// Customer constants.
-
 }

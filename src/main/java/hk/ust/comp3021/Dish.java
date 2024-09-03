@@ -14,8 +14,6 @@ public class Dish {
 
     private BigDecimal price;
 
-//    private Restaurant restaurant = null;
     private Long restaurantId;
 
 }
-

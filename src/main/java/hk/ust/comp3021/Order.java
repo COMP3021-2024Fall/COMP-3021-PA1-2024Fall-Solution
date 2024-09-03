@@ -26,7 +26,6 @@ public class Order {
     /// Make it null when not dispatched.
     private Rider rider = null;
 
-    // TODO: Deprecated?
     private Double estimatedTime;
 
     public Order() {
@@ -42,7 +41,7 @@ public class Order {
     public void calculateEstimatedTime() {
         Double restaurantToCustomerDistance = restaurant.getLocation().distanceTo(customer.getLocation());
         Double riderToRestaurantDistance = rider.getLocation().distanceTo(restaurant.getLocation());
-        this.estimatedTime = (restaurantToCustomerDistance + riderToRestaurantDistance) / Constants.deliverySpeed;
+        this.estimatedTime = (restaurantToCustomerDistance + riderToRestaurantDistance) / Constants.DELIVERY_SPEED;
     }
 
 }

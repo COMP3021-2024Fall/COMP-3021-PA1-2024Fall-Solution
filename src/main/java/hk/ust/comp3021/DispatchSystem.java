@@ -10,10 +10,7 @@ public class DispatchSystem {
 
     private static volatile DispatchSystem dispatchSystem;
 
-    /// The field is to record the current account amount, used to represent the account id.
-    private Long accountNumber = 0L;
-
-    /// The field represents the current time stamp, we assume .
+    /// The field represents the current time stamp, we assume the current time stamp is 3600 seconds.
     private Long currentTimestamp = 3600L;
 
     private List<Dish> availableDishes;
@@ -67,7 +64,7 @@ public class DispatchSystem {
                 }
 
                 String accountType = fields[1];
-                if (accountType.equals("CUSTOMER")) {
+                if (accountType.equals(Constants.ACCOUNT_CUSTOMER)) {
                     assert fields.length == 8;
                     Customer customer = new Customer();
                     customer.setId(Long.valueOf(fields[0]));
@@ -82,7 +79,7 @@ public class DispatchSystem {
                     customer.setEmail(fields[7]);
 
                     customer.register();
-                } else if (accountType.equals("RESTAURANT")) {
+                } else if (accountType.equals(Constants.ACCOUNT_RESTAURANT)) {
                     assert fields.length == 7;
                     Restaurant restaurant = new Restaurant();
                     restaurant.setId(Long.valueOf(fields[0]));
@@ -96,7 +93,7 @@ public class DispatchSystem {
                     restaurant.setStreet(fields[6]);
 
                     restaurant.register();
-                } else if (accountType.equals("RIDER")) {
+                } else if (accountType.equals(Constants.ACCOUNT_RIDER)) {
                     assert fields.length == 9;
                     Rider rider = new Rider();
                     rider.setId(Long.valueOf(fields[0]));
@@ -140,7 +137,6 @@ public class DispatchSystem {
                 dish.setDesc(fields[2]);
                 dish.setPrice(BigDecimal.valueOf(Double.parseDouble(fields[3])));
 
-//                Account.AccountManager accountManager = Account.getAccountManager();
                 Restaurant restaurant = Restaurant.getRestaurantById(Long.valueOf(fields[4]));
                 if (restaurant == null) {
                     throw new IOException("The restaurant is not registered!");
@@ -196,6 +192,10 @@ public class DispatchSystem {
 
                 Long[] dishIds = Arrays.stream(fields[6].substring(1, fields[6].length() - 1).split(" ")).map(Long::valueOf).toArray(Long[]::new);
 
+                if (!checkDishesInRestaurant(restaurant, dishIds)) {
+                    continue;
+                }
+
                 for (Long dishId : dishIds) {
                     Dish dish = getDishById(dishId);
                     if (dish == null) {
@@ -217,6 +217,14 @@ public class DispatchSystem {
 
             }
         }
+    }
+
+    public Boolean checkDishesInRestaurant(Restaurant restaurant, Long[] dishIds) {
+        List<Long> restaurantDishIds = new ArrayList<>(restaurant.getDishes().stream().map(Dish::getId).toList());
+
+        restaurantDishIds.retainAll(new ArrayList<>(List.of(dishIds)));
+
+        return new HashSet<>(restaurantDishIds).containsAll(List.of(dishIds));
     }
 
     public List<Order> getAvailablePendingOrders() {
@@ -253,9 +261,8 @@ public class DispatchSystem {
                 .thenComparing(new RiderRatingRank())
                 .thenComparing(new RiderMonthTaskCountRank());
 
-        Task bestTask = tmpTasks.stream().sorted(taskComparator).findFirst().orElse(null);
-
-        return bestTask;
+        List<Task> tmpTaskList = tmpTasks.stream().sorted(taskComparator).toList();
+        return tmpTaskList.stream().findFirst().orElse(null);
     }
 
     public void dispatchFirstRound() {
@@ -287,18 +294,19 @@ public class DispatchSystem {
 
     }
 
-    public void writeDispatchedOrders(String fileName) throws IOException {
+    public void writeOrders(String fileName, List<Order> orders) throws IOException {
         // Write the dispatched orders to the file.
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
-            for (Order order : dispatchedOrders) {
-                bufferedWriter.write(order.getId() + ", " + order.getStatus() + ", " + order.getRestaurant().getId() + ", " + order.getCustomer().getId() + ", " + order.getCreateTime() + ", " + order.getIsPayed() + ", " + order.getOrderedDishes() + ", " + order.getRider().getId() + ", " + order.getEstimatedTime() + "\n");
+            for (Order order : orders) {
+                bufferedWriter.write(order.getId() + ", " + order.getStatus() + ", " + order.getRestaurant() + ", "
+                        + order.getCustomer() + ", " + order.getCreateTime() + ", " + order.getIsPayed() + ", " +
+                        order.getOrderedDishes() + ", " + order.getRider() + ", " + String.format("%.4f", order.getEstimatedTime()) + "\n");
             }
         }
     }
 
-    /// This function is to simulate the delivery process of riders.
-    public void handleOrderDelivery() {
-
+    public List<Order> getTimeoutDispatchedOrders() {
+        return dispatchedOrders.stream().filter(order -> (order.getEstimatedTime() + currentTimestamp - order.getCreateTime()) > Constants.DELIVERY_TIME_LIMIT).toList();
     }
 
     public static void main(String[] args) {
@@ -310,14 +318,16 @@ public class DispatchSystem {
 
             dispatchSystem.dispatchFirstRound();
 
-            dispatchSystem.writeDispatchedOrders("DispatchedOrders.txt");
+            dispatchSystem.writeOrders("DispatchedOrders.txt", dispatchSystem.dispatchedOrders);
+            List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
+
+            dispatchSystem.writeOrders("TimeoutOrders.txt", timeoutOrders);
+
         } catch (IOException exception) {
             exception.printStackTrace();
         }
 
         Account.AccountManager accountManager = Account.getAccountManager();
-        // Parse the first-round orders.
-        System.out.println("Hello world!");
     }
 
 }

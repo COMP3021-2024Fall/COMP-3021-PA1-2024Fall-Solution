@@ -3,11 +3,11 @@ package hk.ust.comp3021;
 public class Constants {
 
     /// General constants.
-    // The time limit of delivery is all 30 min.
-    public static final Integer deliverTimeLimit = 1800;
+    // The time limit of delivery is all 30 min, since the created time of the order.
+    public static final Integer DELIVERY_TIME_LIMIT = 1800;
 
     // The speed of the rider is all 4 m/s.
-    public static final Integer deliverySpeed = 4;
+    public static final Integer DELIVERY_SPEED = 4;
 
     public static final String ACCOUNT_CUSTOMER = "CUSTOMER";
 

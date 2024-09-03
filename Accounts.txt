@@ -50,7 +50,7 @@
 48, RIDER, Ethan S, 89893650, [1170 460], Male, 5, 10, 217
 49, RIDER, Sophia L, 89894155, [1175 465], Female, 4, 8, 98
 50, RIDER, Daniel K, 89894660, [80 470], Male, 3, 6, 56
-51, RIDER, Mia H, 89895165, [1185 475], Female, 4, 7, 178
+51, RIDER, Mia H, 89895165, [1200 490], Female, 4, 7, 178
 52, RIDER, Anthony R, 89895670, [10 480], Male, 3, 5, 28
 53, RIDER, Chloe B, 89896175, [1195 45], Female, 5, 9, 234
 54, RIDER, Joshua M, 89896680, [1200 490], Male, 4, 8, 123

@@ -317,9 +317,16 @@ public class DispatchSystem {
 
     /// You should use the method to output orders for us to check the correctness of your implementation.
     public void writeOrders(String fileName, List<Order> orders) throws IOException {
+        List<Order> orderedOrders = orders.stream().sorted(new Comparator<Order>() {
+            @Override
+            public int compare(Order o1, Order o2) {
+                return o1.getId().compareTo(o2.getId());
+            }
+        }).toList();
+
         // Write the dispatched orders to the file.
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
-            for (Order order : orders) {
+            for (Order order : orderedOrders) {
                 bufferedWriter.write(order.getId() + ", " + order.getStatus() + ", " + order.getRestaurant() + ", "
                         + order.getCustomer() + ", " + order.getCreateTime() + ", " + order.getIsPayed() + ", " +
                         order.getOrderedDishes() + ", " + order.getRider() + ", " + String.format("%.4f", order.getEstimatedTime()) + "\n");
@@ -340,13 +347,14 @@ public class DispatchSystem {
             dispatchSystem.parseAccounts("Accounts.txt");
             dispatchSystem.parseDishes("Dishes.txt");
             dispatchSystem.parseOrders("Orders.txt");
+            dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.availableOrders);
 
             dispatchSystem.dispatchFirstRound();
 
-            dispatchSystem.writeOrders("DispatchedOrders.txt", dispatchSystem.dispatchedOrders);
+            dispatchSystem.writeOrders("firstRoundDispatchedOrders.txt", dispatchSystem.dispatchedOrders);
             List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
 
-            dispatchSystem.writeOrders("TimeoutOrders.txt", timeoutOrders);
+            dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
 
         } catch (IOException exception) {
             exception.printStackTrace();

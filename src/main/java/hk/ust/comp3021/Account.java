@@ -37,13 +37,7 @@ public abstract class Account {
         }
 
         public Account getAccountById(Long id) {
-//            return registeredAccounts.stream().filter(account -> account.getId().equals(id)).findFirst().orElse(null);
-            for (Account account : registeredAccounts) {
-                if (account.getId().equals(id)) {
-                    return account;
-                }
-            }
-            return null;
+            return registeredAccounts.stream().filter(account -> account.getId().equals(id)).findFirst().orElse(null);
         }
 
         public void addCustomer(Customer customer) {
@@ -77,6 +71,7 @@ public abstract class Account {
 
     protected static AccountManager accountManager = new AccountManager();
 
+    /// Task 2: Implement the register method.
     public abstract void register();
 
     public static Account getAccountById(Long id) {

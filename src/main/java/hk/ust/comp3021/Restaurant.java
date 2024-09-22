@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @Data
@@ -33,6 +34,23 @@ public class Restaurant extends Account {
 
     public static Restaurant getRestaurantById(Long id) {
         return accountManager.getRestaurantById(id);
+    }
+
+    /// Do not modify this method.
+    @Override
+    public String toString() {
+        List<Long> dishIds = new LinkedList<>(dishes.stream().map(Dish::getId).toList());
+        dishIds.sort(Long::compareTo);
+        return "Restaurant{" +
+                "id=" + id +
+                ", accountType='" + accountType + '\'' +
+                ", name='" + name + '\'' +
+                ", contactNumber='" + contactNumber + '\'' +
+                ", location=" + location +
+                ", district='" + district + '\'' +
+                ", street='" + street + '\'' +
+                ", dishIds='" + dishIds + '\'' +
+                '}';
     }
 
 }

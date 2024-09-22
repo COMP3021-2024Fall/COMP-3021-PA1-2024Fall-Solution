@@ -313,6 +313,8 @@ public class DispatchSystem {
             dispatchedOrders.add(order);
         }
 
+        availableRiders = tmpRiders;
+
     }
 
     /// You should use the method to output orders for us to check the correctness of your implementation.
@@ -334,14 +336,67 @@ public class DispatchSystem {
         }
     }
 
+    public void writeAccounts(String fileName, List<Account> accounts) throws IOException {
+        List<Account> orderedAccounts = accounts.stream().sorted(new Comparator<Account>() {
+            @Override
+            public int compare(Account o1, Account o2) {
+                return o1.getId().compareTo(o2.getId());
+            }
+        }).toList();
+
+        // Write the dispatched orders to the file.
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
+            for (Account account : orderedAccounts) {
+                bufferedWriter.write(account.toString() + "\n");
+            }
+        }
+    }
+
+    public void writeDishes(String fileName, List<Dish> dishes) throws IOException {
+        List<Dish> orderedDishes = dishes.stream().sorted(new Comparator<Dish>() {
+            @Override
+            public int compare(Dish o1, Dish o2) {
+                return o1.getId().compareTo(o2.getId());
+            }
+        }).toList();
+
+        // Write the dispatched orders to the file.
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
+            for (Dish dish : orderedDishes) {
+                bufferedWriter.write(dish.getId() + ", " + dish.getName() + ", " + dish.getDesc() + ", "
+                        + dish.getPrice() + ", " + dish.getRestaurantId() + "\n");
+            }
+        }
+    }
+
     /// Task 10: Implement the getTimeoutDispatchedOrders() method to get the timeout dispatched orders.
     /// Hint: Do not forget to take the current time stamp into consideration.
     public List<Order> getTimeoutDispatchedOrders() {
         return dispatchedOrders.stream().filter(order -> (order.getEstimatedTime() + currentTimestamp - order.getCreateTime()) > Constants.DELIVERY_TIME_LIMIT).toList();
     }
 
+    /// Do not modify the function.
+    public List<Order> getAvailableOrders() {
+        return availableOrders;
+    }
+
+    /// Do not modify the function.
+    public List<Order> getDispatchedOrders() {
+        return dispatchedOrders;
+    }
+
+    public List<Account> getAccounts() {
+        Account.AccountManager manager = Account.getAccountManager();
+        return manager.getRegisteredAccounts();
+    }
+
+    public List<Dish> getDishes() {
+        return availableDishes;
+    }
+
     /// Finish the main method to test your implementation.a
     public static void main(String[] args) {
+        /**
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
             dispatchSystem.parseAccounts("Accounts.txt");
@@ -356,6 +411,31 @@ public class DispatchSystem {
 
             dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
 
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+         */
+
+        try {
+            DispatchSystem dispatchSystem = DispatchSystem.getInstance();
+            dispatchSystem.parseAccounts("Accounts.txt");
+            dispatchSystem.parseDishes("Dishes.txt");
+            dispatchSystem.parseOrders("Orders.txt");
+            List<Account> allAccounts = dispatchSystem.getAccounts();
+            dispatchSystem.writeAccounts("AccountsTest1.txt", allAccounts);
+
+            List<Dish> allDishes = dispatchSystem.getDishes();
+            dispatchSystem.writeDishes("DishesTest1.txt", allDishes);
+
+            List<Order> allOrders = dispatchSystem.getAvailableOrders();
+            dispatchSystem.writeOrders("OrdersTest1.txt", allOrders);
+
+            dispatchSystem.dispatchFirstRound();
+
+            dispatchSystem.writeOrders("firstRoundDispatchedOrdersTest1.txt", dispatchSystem.getDispatchedOrders());
+
+            List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
+            dispatchSystem.writeOrders("timeoutDispatchedOrdersTest1.txt", timeoutOrders);
         } catch (IOException exception) {
             exception.printStackTrace();
         }

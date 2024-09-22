@@ -36,6 +36,11 @@ public abstract class Account {
             this.registeredRestaurants = new ArrayList<>();
         }
 
+        /// Do not modify this method.
+        public List<Account> getRegisteredAccounts() {
+            return registeredAccounts;
+        }
+
         public Account getAccountById(Long id) {
             return registeredAccounts.stream().filter(account -> account.getId().equals(id)).findFirst().orElse(null);
         }

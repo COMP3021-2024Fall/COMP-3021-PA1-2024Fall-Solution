@@ -1,0 +1,62 @@
+1, CUSTOMER, John Doe, 23476543, [1223 -1543], 1, Male, john.doe@email.com
+2, CUSTOMER, Jane Smith, 23569874, [-2456 2345], 2, Female, jane.smith@email.com
+3, CUSTOMER, Alice Johnson, 23658947, [543 876], 1, Female, alice.johnson@email.com
+4, CUSTOMER, Bob Brown, 23767859, [1765 -2834], 2, Male, bob.brown@email.com
+5, CUSTOMER, Charlie Davis, 23876968, [-1500 1500], 1, Male, charlie.davis@email.com
+6, CUSTOMER, Daisy Evans, 23985077, [2999 -2999], 2, Female, daisy.evans@email.com
+7, CUSTOMER, Ethan Fox, 24094186, [-1234 1234], 1, Male, ethan.fox@email.com
+8, CUSTOMER, Grace Green, 24103295, [750 -750], 2, Female, grace.green@email.com
+9, CUSTOMER, Harry Hill, 24212304, [2345 678], 1, Male, harry.hill@email.com
+10, CUSTOMER, Iris Ivy, 24321413, [-678 2890], 2, Female, iris.ivy@email.com
+11, CUSTOMER, Kyle Knox, 24430522, [987 -987], 1, Male, kyle.knox@email.com
+12, CUSTOMER, Laura Lee, 24539631, [-2990 2990], 2, Female, laura.lee@email.com
+13, CUSTOMER, Mike Moss, 24648740, [500 -500], 1, Male, mike.moss@email.com
+14, CUSTOMER, Nancy Nix, 24757859, [2500 -2500], 2, Female, nancy.nix@email.com
+15, CUSTOMER, Owen Opal, 24866968, [-750 750], 1, Male, owen.opal@email.com
+16, CUSTOMER, Patty Pike, 24976077, [1460 -1460], 2, Female, patty.pike@email.com
+17, CUSTOMER, Quentin Quill, 25085186, [-500 500], 1, Male, quentin.quill@email.com
+18, CUSTOMER, Rachel Reed, 25194295, [2000 -2000], 2, Female, rachel.reed@email.com
+19, CUSTOMER, Steve Stone, 25303404, [-2345 2346], 1, Male, steve.stone@email.com
+20, CUSTOMER, Tina Tuck, 25412513, [1234 -1234], 2, Female, tina.tuck@email.com
+
+21, RESTAURANT, Bella Vista, 23456789, [1503 -1432], Vista District, Maple Street
+22, RESTAURANT, Savory Seas, 23567890, [-2365 2145], Marina Bay, Dockside Road
+23, RESTAURANT, Highland Eatery, 23678901, [543 876], Highland Park, Glenwood Drive
+24, RESTAURANT, Metro Grille, 23789012, [1765 -2843], Capitol District, Central Plaza
+25, RESTAURANT, Curry Leaf, 23890123, [-1450 1350], Eastwood, Spice Route
+26, RESTAURANT, Roma Ristorante, 23901234, [2900 -2900], Old Town, Roma Lane
+27, RESTAURANT, Lakeside Dining, 24012345, [-1234 1244], Lakeview, Shoreline Road
+28, RESTAURANT, Summit Bistro, 24123456, [760 -750], Summit Ridge, Crestpoint Way
+29, RESTAURANT, Orchard Kitchen, 24234567, [2350 678], Orchard Lands, Apple Court
+30, RESTAURANT, Coastal Bites, 24345678, [-650 2850], Seaside, Oceanview Boulevard
+31, RESTAURANT, Urban Plates, 24456789, [1234 -2341], Downtown, Urban Circle
+32, RESTAURANT, Garden Delights, 24567890, [-2400 2300], Greenbelt, Blossom Path
+33, RESTAURANT, Riverfront Grill, 24678901, [1345 789], Riverside, River Road
+34, RESTAURANT, Peak View Cafe, 24789012, [2000 -2000], Mountain District, Peak Street
+35, RESTAURANT, Sunnyside Diner, 24890123, [-800 800], Sunnyside, Sunrise Lane
+36, RESTAURANT, Blue Lagoon, 24901234, [2800 -2800], Coastal Zone, Lagoon Drive
+37, RESTAURANT, Vintage Eats, 25012345, [-1100 1100], Heritage Quarter, Vintage Ave
+38, RESTAURANT, The Noodle Bowl, 25123456, [500 -500], Chinatown, Noodle Way
+39, RESTAURANT, The French Table, 25234567, [-2500 2500], French Quarter, Bordeaux Boulevard
+40, RESTAURANT, Southern Comfort, 25345678, [1200 -1200], Southern District, Magnolia Drive
+
+41, RIDER, Michael Reed, 23156789, [1452 -2431], Male, 4, 8.2, 132
+42, RIDER, Isabella Quinn, 23267890, [-2566 2341], Female, 4, 8.7, 189
+43, RIDER, Ethan Moore, 23378901, [543 876], Male, 3, 6.5, 78
+44, RIDER, Natalie Bean, 23489012, [1765 -2834], Female, 4, 9.3, 264
+45, RIDER, Lucas Grey, 23590123, [-1500 1500], Male, 3, 7.8, 57
+46, RIDER, Sophia Hart, 23601234, [2879 -2879], Female, 4, 8.1, 201
+47, RIDER, Mason Fox, 23712345, [-1234 1234], Male, 4, 7.4, 145
+48, RIDER, Olivia Gale, 23823456, [750 -750], Female, 4, 9.5, 320
+49, RIDER, Liam Stone, 23934567, [2345 678], Male, 3, 6.9, 90
+50, RIDER, Emma Marsh, 24045678, [-678 2890], Female, 5, 8.6, 242
+51, RIDER, Noah Sage, 24156789, [1234 -2341], Male, 4, 8.4, 103
+52, RIDER, Ava Spire, 24267890, [-2400 2300], Female, 4, 7.9, 210
+53, RIDER, Jacob Pike, 24378901, [1345 789], Male, 4, 6.3, 58
+54, RIDER, Mia Pond, 24489012, [2000 -2000], Female, 5, 9.2, 375
+55, RIDER, Daniel Lark, 24590123, [-800 800], Male, 4, 5.4, 22
+56, RIDER, Chloe Lane, 24601234, [2780 -2780], Female, 4, 8.5, 198
+57, RIDER, Jack Vale, 24712345, [-1100 1100], Male, 5, 7.1, 134
+58, RIDER, Lily Gold, 24823456, [1500 -1500], Female, 4, 9.8, 287
+59, RIDER, William Shade, 24934567, [-2500 2500], Male, 4, 6.6, 45
+60, RIDER, Zoe Storm, 25045678, [1100 -1100], Female, 4, 8.0, 156

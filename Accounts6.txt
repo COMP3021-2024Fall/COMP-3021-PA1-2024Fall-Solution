@@ -1,0 +1,182 @@
+1, CUSTOMER, John Doe, 23476543, [1223 -1543], 1, Male, john.doe@email.com
+2, CUSTOMER, Jane Smith, 23569874, [-2456 2345], 2, Female, jane.smith@email.com
+3, CUSTOMER, Alice Johnson, 23658947, [543 876], 1, Female, alice.johnson@email.com
+4, CUSTOMER, Bob Brown, 23767859, [1765 -2834], 2, Male, bob.brown@email.com
+5, CUSTOMER, Charlie Davis, 23876968, [-1500 1500], 1, Male, charlie.davis@email.com
+6, CUSTOMER, Daisy Evans, 23985077, [2999 -2999], 2, Female, daisy.evans@email.com
+7, CUSTOMER, Ethan Fox, 24094186, [-1234 1234], 1, Male, ethan.fox@email.com
+8, CUSTOMER, Grace Green, 24103295, [750 -750], 2, Female, grace.green@email.com
+9, CUSTOMER, Harry Hill, 24212304, [2345 678], 1, Male, harry.hill@email.com
+10, CUSTOMER, Iris Ivy, 24321413, [-678 2890], 2, Female, iris.ivy@email.com
+11, CUSTOMER, Kyle Knox, 24430522, [987 -987], 1, Male, kyle.knox@email.com
+12, CUSTOMER, Laura Lee, 24539631, [-2990 2990], 2, Female, laura.lee@email.com
+13, CUSTOMER, Mike Moss, 24648740, [500 -500], 1, Male, mike.moss@email.com
+14, CUSTOMER, Nancy Nix, 24757859, [2500 -2500], 2, Female, nancy.nix@email.com
+15, CUSTOMER, Owen Opal, 24866968, [-750 750], 1, Male, owen.opal@email.com
+16, CUSTOMER, Patty Pike, 24976077, [1460 -1460], 2, Female, patty.pike@email.com
+17, CUSTOMER, Quentin Quill, 25085186, [-500 500], 1, Male, quentin.quill@email.com
+18, CUSTOMER, Rachel Reed, 25194295, [2000 -2000], 2, Female, rachel.reed@email.com
+19, CUSTOMER, Steve Stone, 25303404, [-2345 2346], 1, Male, steve.stone@email.com
+20, CUSTOMER, Tina Tuck, 25412513, [1234 -1234], 2, Female, tina.tuck@email.com
+21, CUSTOMER, Victor Vale, 25521622, [3000 0], 1, Male, victor.vale@email.com
+22, CUSTOMER, Wendy West, 25630731, [-2900 2900], 2, Female, wendy.west@email.com
+23, CUSTOMER, Xavier Xing, 25739840, [28 -28], 1, Male, xavier.xing@email.com
+24, CUSTOMER, Yasmine Yule, 25848959, [500 -2500], 2, Female, yasmine.yule@email.com
+25, CUSTOMER, Zachary Zane, 25957068, [-800 800], 1, Male, zachary.zane@email.com
+26, CUSTOMER, Amanda Alcott, 26066177, [2500 -1000], 2, Female, amanda.alcott@email.com
+27, CUSTOMER, Brian Booth, 26175286, [-1500 2500], 1, Male, brian.booth@email.com
+28, CUSTOMER, Caroline Cruz, 26284395, [1000 -2000], 2, Female, caroline.cruz@email.com
+29, CUSTOMER, Derek Dane, 26393504, [-1000 3000], 1, Male, derek.dane@email.com
+30, CUSTOMER, Elaine East, 26502613, [1500 -1500], 2, Female, elaine.east@email.com
+31, CUSTOMER, Fred Finch, 26611722, [800 -800], 1, Male, fred.finch@email.com
+32, CUSTOMER, Gloria Gale, 26720831, [-750 2450], 2, Female, gloria.gale@email.com
+33, CUSTOMER, Hector Hall, 26829940, [2300 -2300], 1, Male, hector.hall@email.com
+34, CUSTOMER, Ingrid Isle, 26938059, [-1100 1100], 2, Female, ingrid.isle@email.com
+35, CUSTOMER, Justin Jule, 27047168, [3000 -3000], 1, Male, justin.jule@email.com
+36, CUSTOMER, Karen Kite, 27156277, [-1000 2000], 2, Female, karen.kite@email.com
+37, CUSTOMER, Leon Loop, 27265386, [2000 -2000], 1, Male, leon.loop@email.com
+38, CUSTOMER, Mandy Mint, 27374495, [-2400 2400], 2, Female, mandy.mint@email.com
+39, CUSTOMER, Neil Nape, 27483604, [1200 -1200], 1, Male, neil.nape@email.com
+40, CUSTOMER, Olivia Oat, 27592713, [-3000 3000], 2, Female, olivia.oat@email.com
+41, CUSTOMER, Peter Park, 27601822, [1000 -1000], 1, Male, peter.park@email.com
+42, CUSTOMER, Quinn Quest, 27710931, [-1500 1500], 2, Female, quinn.quest@email.com
+43, CUSTOMER, Robert Reed, 27820040, [2500 -2500], 1, Male, robert.reed@email.com
+44, CUSTOMER, Susan Storm, 27929159, [-1750 1750], 2, Female, susan.storm@email.com
+45, CUSTOMER, Timothy Tate, 28038268, [2000 -1000], 1, Male, timothy.tate@email.com
+46, CUSTOMER, Ursula Upton, 28147377, [-2000 2000], 2, Female, ursula.upton@email.com
+47, CUSTOMER, Vincent Vale, 28256486, [1500 -1500], 1, Male, vincent.vale@email.com
+48, CUSTOMER, Wendy Wool, 28365595, [-2500 2500], 2, Female, wendy.wool@email.com
+49, CUSTOMER, Xavier Xant, 28474704, [500 -500], 1, Male, xavier.xant@email.com
+50, CUSTOMER, Yvonne York, 28583813, [-3000 3000], 2, Female, yvonne.york@email.com
+51, CUSTOMER, Adam Archer, 28692922, [1000 -2500], 1, Male, adam.archer@email.com
+52, CUSTOMER, Bella Banks, 28801031, [-1200 2200], 2, Female, bella.banks@email.com
+53, CUSTOMER, Carl Cross, 28910140, [2500 -1000], 1, Male, carl.cross@email.com
+54, CUSTOMER, Diana Drew, 29019259, [-1800 1800], 2, Female, diana.drew@email.com
+55, CUSTOMER, Eric Ellis, 29128368, [2000 -2000], 1, Male, eric.ellis@email.com
+56, CUSTOMER, Fiona Finch, 29237477, [-2000 2000], 2, Female, fiona.finch@email.com
+57, CUSTOMER, George Gale, 29346586, [1500 -1500], 1, Male, george.gale@email.com
+58, CUSTOMER, Helen Hunt, 29455695, [-2500 2500], 2, Female, helen.hunt@email.com
+59, CUSTOMER, Ian Ives, 29564804, [500 -500], 1, Male, ian.ives@email.com
+60, CUSTOMER, Judy Jones, 29673913, [-3000 3000], 2, Female, judy.jones@email.com
+
+61, RESTAURANT, Harbor Feast, 23456129, [1452 -2432], Harbor District, Marina Way
+62, RESTAURANT, Basil and Thyme, 23567238, [-2566 2341], Herb District, Garden Path
+63, RESTAURANT, Eagle's Perch, 23678347, [524 987], Highland Area, Skyline Terrace
+64, RESTAURANT, Urban Eatery, 23789456, [1653 -2736], Central District, Commerce Avenue
+65, RESTAURANT, Ginger Spice Café, 23890565, [-1411 1310], Spice District, Ginger Lane
+66, RESTAURANT, Trattoria Vista, 23901674, [2880 -2880], Old Quarter, Vintage Street
+67, RESTAURANT, Lakefront Diner, 24012783, [-1225 1225], Lakefront, Lakeside Avenue
+68, RESTAURANT, Cliffside Bistro, 24123892, [781 -744], Cliff District, Ridge View
+69, RESTAURANT, Orchard Tavern, 24234901, [2349 684], Orchard Valley, Harvest Road
+70, RESTAURANT, Seashore Café, 24346010, [-661 2839], Coastal Zone, Beachway
+71, RESTAURANT, Metropolitan Bites, 24457129, [1255 -2452], Metro Area, Central Square
+72, RESTAURANT, Verdant Plate, 24568238, [-2381 2209], Garden District, Leafy Lane
+73, RESTAURANT, Riverside Café, 24679347, [1356 796], Riverside, Stream View
+74, RESTAURANT, Highpoint Café, 24780456, [2021 -2021], Highland Park, Mountain Pass
+75, RESTAURANT, Sunrise Bistro, 24891565, [-801 819], Sunrise District, Dawn Road
+76, RESTAURANT, Coral Reef Café, 25002674, [2761 -2761], Marine District, Coral Street
+77, RESTAURANT, Old Town Café, 25113783, [-1129 1130], Historic District, Old Gate
+78, RESTAURANT, Dragon's Lair, 25224892, [521 -519], Dragon District, Emperor’s Walk
+79, RESTAURANT, Parisian Delight, 25335901, [-2599 2599], French Quarter, Riviera Road
+80, RESTAURANT, Dixie Grill, 25447010, [1101 -1101], Southern District, Dixie Lane
+81, RESTAURANT, Kebab Palace, 25558129, [2310 -1462], Middle East Block, Kebab Court
+82, RESTAURANT, Oceanic Bites, 25669238, [-1243 2356], Seashore District, Ocean Drive
+83, RESTAURANT, Little Venice Ristorante, 25780347, [535 875], Little Italy, Canal Street
+84, RESTAURANT, Green Garden Eatery, 25891456, [1756 -2833], Eco District, Nature Path
+85, RESTAURANT, Sushi Square, 26002565, [-1549 1551], Eastern District, Sushi Avenue
+86, RESTAURANT, Barn Grill, 26113674, [2991 -2989], Farm District, Country Road
+87, RESTAURANT, Pie Corner, 26224783, [-1234 1236], Baker’s Corner, Pie Lane
+88, RESTAURANT, Steak Out, 26335892, [754 -754], Ranch District, Steak Alley
+89, RESTAURANT, Taco House, 26446901, [2347 677], Latin Quarter, Fiesta Avenue
+90, RESTAURANT, Brewery Tap, 26558010, [-688 2891], Brewery District, Tap Street
+91, RESTAURANT, Alpine Retreat, 26669129, [2999 -2999], Mountain Base, Alpine Path
+92, RESTAURANT, Bay Watch Dining, 26780238, [-1901 1900], Bay Area, Bay View
+93, RESTAURANT, Olive Garden, 26891347, [44 -46], Mediterranean District, Olive Road
+94, RESTAURANT, Noodle Nook, 27002456, [501 -501], Asia Town, Noodle Lane
+95, RESTAURANT, Polar Diner, 27113565, [-2501 2501], Northern District, Polar Way
+96, RESTAURANT, Cajun Corner, 27224674, [1501 -1501], Cajun District, Gumbo Boulevard
+97, RESTAURANT, Tapas Bar, 27335783, [-799 801], Spanish Quarter, Tapas Plaza
+98, RESTAURANT, Veggie Village, 27446892, [2801 -2801], Vegan District, Green Street
+99, RESTAURANT, Pie Bakery, 27557901, [-1101 1101], Baker’s District, Sweet Street
+100, RESTAURANT, Coffee House, 27669010, [1201 -1201], Café District, Brew Lane
+101, RESTAURANT, Brunch Bay Café, 27780129, [1102 -1102], Brunch Bay, Bistro Boulevard
+102, RESTAURANT, Fusion Flavors, 27891238, [-2201 2201], Fusion Quarter, Mix Lane
+103, RESTAURANT, Ramen Hut, 28002347, [-1501 1501], Ramen District, Noodle Alley
+104, RESTAURANT, Sizzle Steakhouse, 28113456, [501 -501], Steak Sector, Grill Grove
+105, RESTAURANT, Pita Patio, 28224565, [2201 -2201], Greek Isle, Pita Path
+106, RESTAURANT, Taco Terrace, 28335674, [-3001 3001], Taco Town, Taco Trail
+107, RESTAURANT, Mediterranean Morsels, 28446783, [1501 -1501], Mare District, Med Mare Way
+108, RESTAURANT, Curry Kitchen, 28557892, [801 -801], Indian Quarter, Curry Lane
+109, RESTAURANT, Vegan Venue, 28668901, [-2901 2901], Health Hub, Vegan Vista
+110, RESTAURANT, Pastry Place, 28779010, [2344 -2344], Pastry Park, Baker’s Bend
+111, RESTAURANT, Lakeside Grille, 28781111, [1453 -2431], Lakeside District, Marina Street
+112, RESTAURANT, Vintage Vine, 28892222, [-2567 2342], Vineyard Valley, Vine Street
+113, RESTAURANT, Summit Eatery, 28903333, [513 976], Peak District, Summit Road
+114, RESTAURANT, City Lights Café, 29014444, [1654 -2735], Downtown District, Central Blvd
+115, RESTAURANT, The Ginger Room, 29125555, [-1400 1300], Spice District, Ginger Way
+116, RESTAURANT, Napoli Pasta House, 29236666, [2879 -2879], Little Italy, Roma Road
+117, RESTAURANT, Lakeshore Bistro, 29347777, [-1224 1224], Lakefront, Waterside Drive
+118, RESTAURANT, Cliffhanger Restaurant, 29458888, [780 -745], Cliffside District, Ridge Road
+119, RESTAURANT, Orchard Café, 29569999, [2350 685], Orchard Gardens, Blossom Lane
+120, RESTAURANT, Sandy Beach Eatery, 29670000, [-660 2840], Beachfront, Sandy Lane
+
+121, RIDER, Alex Carter, 23457601, [1502 -2432], Male, 4, 7.8, 123
+122, RIDER, Brooke Allen, 23468712, [-2560 2345], Female, 4, 8.9, 186
+123, RIDER, Charlie Brown, 23479823, [540 870], Male, 4, 6.5, 79
+124, RIDER, Diana Craig, 23480934, [1770 -2840], Female, 4, 9.3, 267
+125, RIDER, Evan Doyle, 23491045, [-1510 1510], Male, 4, 5.8, 55
+126, RIDER, Fiona Edwards, 23502156, [2880 -2885], Female, 4, 8.1, 200
+127, RIDER, George Fisher, 23513267, [-1240 1250], Male, 4, 7.4, 140
+128, RIDER, Hilda Gomes, 23524378, [755 -755], Female, 4, 9.7, 321
+129, RIDER, Ian Harper, 23535489, [2350 675], Male, 4, 6.2, 88
+130, RIDER, Jenna Irvine, 23546590, [-680 2880], Female, 4, 8.4, 243
+131, RIDER, Kyle Jenkins, 23557601, [1230 -2330], Male, 4, 7.9, 102
+132, RIDER, Lila Knox, 23568712, [-2395 2310], Female, 4, 7.7, 212
+133, RIDER, Mason Lambert, 23579823, [1350 785], Male, 4, 6.3, 59
+134, RIDER, Nina McCoy, 23580934, [2010 -2010], Female, 3, 9.2, 376
+135, RIDER, Oscar Newman, 23591045, [-800 800], Male, 4, 5.3, 21
+136, RIDER, Paula Oliver, 23602156, [2785 -2780], Female, 4, 8.6, 199
+137, RIDER, Quentin Parker, 23613267, [-1105 1105], Male, 4, 7.2, 133
+138, RIDER, Rachel Quinn, 23624378, [1505 -1505], Female, 4, 9.5, 289
+139, RIDER, Seth Rios, 23635489, [-2505 2505], Male, 4, 6.8, 44
+140, RIDER, Tanya Simmons, 23646590, [1105 -1105], Female, 4, 8.1, 157
+141, RIDER, Uriel Thomas, 23657601, [2305 -1505], Male, 4, 8.0, 131
+142, RIDER, Vera Underwood, 23668712, [-1255 2355], Female, 4, 7.3, 190
+143, RIDER, Walter Vance, 23679823, [535 885], Male, 4, 6.7, 77
+144, RIDER, Xena Wallace, 23680934, [1755 -2855], Female, 4, 9.4, 263
+145, RIDER, Yosef Zimmerman, 23691045, [-1555 1555], Male, 4, 6.0, 56
+146, RIDER, Zoe Abbott, 23702156, [2895 -2890], Female, 5, 8.0, 202
+147, RIDER, Alan Bates, 23713267, [-1235 1245], Male, 4, 7.6, 144
+148, RIDER, Brooke Casey, 23724378, [760 -760], Female, 4, 9.6, 318
+149, RIDER, Chris Dudley, 23735489, [2345 680], Male, 4, 6.1, 91
+150, RIDER, Dana Elliot, 23746590, [-685 2895], Female, 4, 8.3, 240
+151, RIDER, Edward Flynn, 23757601, [1225 -2420], Male, 4, 8.4, 105
+152, RIDER, Faith Grant, 23768712, [-2380 2320], Female, 3, 7.5, 207
+153, RIDER, Grant Hayes, 23779823, [1340 795], Male, 4, 6.6, 60
+154, RIDER, Hope Irvine, 23780934, [2005 -2005], Female, 4, 9.1, 373
+155, RIDER, Ivan Jenkins, 23791045, [-805 805], Male, 4, 5.6, 24
+156, RIDER, Julia Kennedy, 23802156, [2785 -2785], Female, 4, 8.7, 196
+157, RIDER, Kurt Lawson, 23813267, [-1110 1110], Male, 4, 7.3, 138
+158, RIDER, Lana Morris, 23824378, [1510 -1510], Female, 4, 9.8, 285
+159, RIDER, Milo Norton, 23835489, [-2510 2510], Male, 4, 6.9, 47
+160, RIDER, Nina Osborne, 23846590, [1110 -1110], Female, 4, 8.2, 154
+161, RIDER, Owen Pitts, 23857601, [2340 -2340], Male, 4, 7.4, 122
+162, RIDER, Penny Quinn, 23868712, [-2565 2340], Female, 4, 8.8, 186
+163, RIDER, Quincy Rivera, 23879823, [545 870], Male, 5, 6.4, 78
+164, RIDER, Rosa Sanders, 23880934, [1775 -2835], Female, 4, 9.2, 266
+165, RIDER, Sam Torres, 23891045, [-1515 1515], Male, 4, 5.7, 54
+166, RIDER, Tina Upton, 23902156, [2875 -2875], Female, 3, 8.2, 203
+167, RIDER, Upton Vance, 23913267, [-1240 1240], Male, 4, 7.5, 143
+168, RIDER, Vicky Webster, 23924378, [765 -765], Female, 4, 9.7, 319
+169, RIDER, Will Xavier, 23935489, [2350 675], Male, 4, 6.2, 89
+170, RIDER, Yolanda Yates, 23946590, [-675 2890], Female, 5, 8.5, 244
+171, RIDER, Zachary Neil, 23957601, [2350 -2350], Male, 4, 7.8, 122
+172, RIDER, April Dixon, 23968712, [-2560 2345], Female, 4, 8.9, 185
+173, RIDER, Connor Walsh, 23979823, [540 875], Male, 4, 6.6, 80
+174, RIDER, Debra Tate, 23980934, [1770 -2840], Female, 4, 9.2, 268
+175, RIDER, Ethan Roy, 23991045, [-1500 1500], Male, 4, 5.9, 56
+176, RIDER, Flora Miles, 24002156, [2880 -2880], Female, 3, 8.2, 199
+177, RIDER, Gerald Finch, 24013267, [-1230 1230], Male, 4, 7.5, 141
+178, RIDER, Heidi Norris, 24024378, [760 -760], Female, 4, 9.6, 322
+179, RIDER, Ivan Grant, 24035489, [2350 680], Male, 4, 6.3, 92
+180, RIDER, Julia Howard, 24046590, [-680 2890], Female, 4, 8.4, 244

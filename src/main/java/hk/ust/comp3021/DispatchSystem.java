@@ -24,7 +24,7 @@ public class DispatchSystem {
 
     private DispatchSystem() {
         if (dispatchSystem != null) {
-            throw new RuntimeException("Plase use the getInstance() method to get the singleton!");
+            throw new RuntimeException("Please use the getInstance() method to get the singleton!");
         }
 
         this.availableOrders = new ArrayList<>();
@@ -396,12 +396,11 @@ public class DispatchSystem {
 
     /// Finish the main method to test your implementation.a
     public static void main(String[] args) {
-        /**
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-            dispatchSystem.parseAccounts("Accounts.txt");
-            dispatchSystem.parseDishes("Dishes.txt");
-            dispatchSystem.parseOrders("Orders.txt");
+            dispatchSystem.parseAccounts("Accounts2.txt");
+            dispatchSystem.parseDishes("Dishes2.txt");
+            dispatchSystem.parseOrders("Orders2.txt");
             dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.availableOrders);
 
             dispatchSystem.dispatchFirstRound();
@@ -411,31 +410,6 @@ public class DispatchSystem {
 
             dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
 
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
-         */
-
-        try {
-            DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-            dispatchSystem.parseAccounts("Accounts.txt");
-            dispatchSystem.parseDishes("Dishes.txt");
-            dispatchSystem.parseOrders("Orders.txt");
-            List<Account> allAccounts = dispatchSystem.getAccounts();
-            dispatchSystem.writeAccounts("AccountsTest1.txt", allAccounts);
-
-            List<Dish> allDishes = dispatchSystem.getDishes();
-            dispatchSystem.writeDishes("DishesTest1.txt", allDishes);
-
-            List<Order> allOrders = dispatchSystem.getAvailableOrders();
-            dispatchSystem.writeOrders("OrdersTest1.txt", allOrders);
-
-            dispatchSystem.dispatchFirstRound();
-
-            dispatchSystem.writeOrders("firstRoundDispatchedOrdersTest1.txt", dispatchSystem.getDispatchedOrders());
-
-            List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
-            dispatchSystem.writeOrders("timeoutDispatchedOrdersTest1.txt", timeoutOrders);
         } catch (IOException exception) {
             exception.printStackTrace();
         }

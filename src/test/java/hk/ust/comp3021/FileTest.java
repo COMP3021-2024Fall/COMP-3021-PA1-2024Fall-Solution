@@ -64,45 +64,45 @@ public class FileTest {
             return same;
         }
 
-        void gradeTest1() {
+        void gradeTest1Template(int testCaseNumber) {
             int subTotal = 0;
             try {
                 DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-                dispatchSystem.parseAccounts("Accounts.txt");
-                dispatchSystem.parseDishes("Dishes.txt");
-                dispatchSystem.parseOrders("Orders.txt");
+                dispatchSystem.parseAccounts("Accounts" + testCaseNumber + ".txt");
+                dispatchSystem.parseDishes("Dishes" + testCaseNumber + ".txt");
+                dispatchSystem.parseOrders("Orders" + testCaseNumber + ".txt");
                 List<Account> allAccounts = dispatchSystem.getAccounts();
-                dispatchSystem.writeAccounts("AccountsTest1.txt", allAccounts);
-                boolean p11 = testIfFilesContentSame("AccountsTest1.txt", "AccountsTest1Oracle.txt");
+                dispatchSystem.writeAccounts("AccountsTest" + testCaseNumber + ".txt", allAccounts);
+                boolean p11 = testIfFilesContentSame("AccountsTest" + testCaseNumber + ".txt", "AccountsTest" + testCaseNumber + "Oracle.txt");
                 if (p11) {
                     subTotal += 20;
                 }
 
                 List<Dish> allDishes = dispatchSystem.getDishes();
-                dispatchSystem.writeDishes("DishesTest1.txt", allDishes);
-                boolean b12 = testIfFilesContentSame("DishesTest1.txt", "DishesTest1Oracle.txt");
+                dispatchSystem.writeDishes("DishesTest" + testCaseNumber + ".txt", allDishes);
+                boolean b12 = testIfFilesContentSame("DishesTest" + testCaseNumber + ".txt", "DishesTest" + testCaseNumber + "Oracle.txt");
                 if (b12) {
                     subTotal += 10;
                 }
 
                 List<Order> allOrders = dispatchSystem.getAvailableOrders();
-                dispatchSystem.writeOrders("OrdersTest1.txt", allOrders);
-                boolean b13 = testIfFilesContentSame("OrdersTest1.txt", "OrdersTest1Oracle.txt");
+                dispatchSystem.writeOrders("OrdersTest" + testCaseNumber + ".txt", allOrders);
+                boolean b13 = testIfFilesContentSame("OrdersTest" + testCaseNumber + ".txt", "OrdersTest" + testCaseNumber + "Oracle.txt");
                 if (b13) {
                     subTotal += 10;
                 }
 
                 dispatchSystem.dispatchFirstRound();
 
-                dispatchSystem.writeOrders("firstRoundDispatchedOrdersTest1.txt", dispatchSystem.getDispatchedOrders());
-                boolean p2 = testIfFilesContentSame("firstRoundDispatchedOrdersTest1.txt", "firstRoundDispatchedOrdersTest1Oracle.txt");
+                dispatchSystem.writeOrders("firstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", dispatchSystem.getDispatchedOrders());
+                boolean p2 = testIfFilesContentSame("firstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", "firstRoundDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p2) {
                     subTotal += 50;
                 }
 
                 List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
-                dispatchSystem.writeOrders("timeoutDispatchedOrdersTest1.txt", timeoutOrders);
-                boolean p3 = testIfFilesContentSame("timeoutDispatchedOrdersTest1.txt", "timeoutDispatchedOrdersTest1Oracle.txt");
+                dispatchSystem.writeOrders("timeoutDispatchedOrdersTest" + testCaseNumber + ".txt", timeoutOrders);
+                boolean p3 = testIfFilesContentSame("timeoutDispatchedOrdersTest" + testCaseNumber + ".txt", "timeoutDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p3) {
                     subTotal += 10;
                 }
@@ -114,44 +114,35 @@ public class FileTest {
 
         }
 
+        void gradeTest1() {
+            gradeTest1Template(1);
+        }
         void gradeTest2() {
-
-            try {
-                DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-                dispatchSystem.parseAccounts("Accounts.txt");
-                dispatchSystem.parseDishes("Dishes.txt");
-                dispatchSystem.parseOrders("Orders.txt");
-                dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.getAvailableOrders());
-
-                dispatchSystem.dispatchFirstRound();
-
-                dispatchSystem.writeOrders("firstRoundDispatchedOrders.txt", dispatchSystem.getDispatchedOrders());
-                List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
-
-
-                dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
-
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            }
+            gradeTest1Template(2);
         }
 
         void gradeTest3() {
+            gradeTest1Template(3);
         }
 
         void gradeTest4() {
+            gradeTest1Template(4);
         }
 
         void gradeTest5() {
+            gradeTest1Template(5);
         }
 
         void gradeTest6() {
+            gradeTest1Template(6);
         }
 
         void gradeTest7() {
+            gradeTest1Template(7);
         }
 
         void gradeTest8() {
+            gradeTest1Template(8);
         }
 
     }

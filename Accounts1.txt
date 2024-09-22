@@ -1,0 +1,32 @@
+1, CUSTOMER, John Doe, 23476543, [-2993 2857], 1, Male, john.doe@example.com
+2, CUSTOMER, Jane Smith, 23499872, [2876 -2143], 2, Female, jane.smith@example.com
+3, CUSTOMER, Alice Johnson, 23458790, [1501 1987], 1, Female, alice.johnson@example.com
+4, CUSTOMER, Bob Brown, 23451234, [-1234 1765], 2, Male, bob.brown@example.com
+5, CUSTOMER, Charlie Davis, 23467891, [2055 0], 1, Male, charlie.davis@example.com
+6, CUSTOMER, Daisy Evans, 23476902, [34 -45], 2, Female, daisy.evans@example.com
+7, CUSTOMER, Ethan Fox, 23489012, [-1543 2001], 1, Male, ethan.fox@example.com
+8, CUSTOMER, Grace Green, 23490123, [2999 -2500], 2, Female, grace.green@example.com
+9, CUSTOMER, Harry Hill, 23467895, [500 1600], 1, Male, harry.hill@example.com
+10, CUSTOMER, Iris Ivy, 23478901, [-1000 3000], 2, Female, iris.ivy@example.com
+
+11, RESTAURANT, The Gourmet Garden, 23456789, [1223 -1543], Central District, Oak Avenue
+12, RESTAURANT, Ocean's Plate, 23567890, [-2456 2345], West Bay, Seaside Drive
+13, RESTAURANT, Mountain View Diner, 23678901, [543 876], Northern Heights, Ridge Road
+14, RESTAURANT, Urban Eats, 23789012, [1765 -2834], Downtown, Market Street
+15, RESTAURANT, Spice Junction, 23890123, [-1500 1500], East End, Curry Lane
+16, RESTAURANT, Little Italy Bistro, 23901234, [2999 -2999], South Bank, Olive Branch Road
+17, RESTAURANT, Riverside Cafe, 24012345, [-1234 1234], Riverside, Waterfront Walk
+18, RESTAURANT, Skyline Rooftop, 24123456, [750 -750], City Center, High Tower Place
+19, RESTAURANT, Green Orchard, 24234567, [2345 678], Orchard District, Blossom Boulevard
+20, RESTAURANT, Blue Plate Diner, 24345678, [-678 2890], Coastal Area, Cliffside Path
+
+21, RIDER, Alex Johnson, 23456781, [-2451 1367], Male, 4, 8.5, 12
+22, RIDER, Brooke Smith, 23567892, [2001 -1503], Female, 3, 7.3, 15
+23, RIDER, Charlie Brown, 23678903, [-3000 3000], Male, 3, 6.8, 8
+24, RIDER, Dana Lee, 23789014, [0 0], Female, 4, 9.2, 20
+25, RIDER, Evan Davis, 23890125, [1234 -567], Male, 5, 5.9, 7
+26, RIDER, Fiona Green, 23901236, [1500 -2300], Female, 4, 8.1, 18
+27, RIDER, George King, 24012347, [-1100 982], Male, 5, 7.7, 11
+28, RIDER, Holly Wright, 24123458, [2750 2750], Female, 4, 9.6, 22
+29, RIDER, Ian Miles, 24234569, [-750 -750], Male, 4, 6.2, 5
+30, RIDER, Jenna Fox, 24345670, [500 300], Female, 4, 8.8, 16

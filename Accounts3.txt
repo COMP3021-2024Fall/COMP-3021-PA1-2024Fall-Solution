@@ -1,6 +1,6 @@
 1, CUSTOMER, John Doe, 23476543, [1223 -1543], 1, Male, john.doe@email.com
 2, CUSTOMER, Jane Smith, 23569874, [-2456 2345], 2, Female, jane.smith@email.com
-3, CUSTOMER, Alice Johnson, 23658947 [543 876], 1, Female, alice.johnson@email.com
+3, CUSTOMER, Alice Johnson, 23658947, [543 876], 1, Female, alice.johnson@email.com
 4, CUSTOMER, Bob Brown, 23767859, [1765 -2834], 2, Male, bob.brown@email.com
 5, CUSTOMER, Charlie Davis, 23876968, [-1500 1500], 1, Male, charlie.davis@email.com
 6, CUSTOMER, Daisy Evans, 23985077, [2999 -2999], 2, Female, daisy.evans@email.com

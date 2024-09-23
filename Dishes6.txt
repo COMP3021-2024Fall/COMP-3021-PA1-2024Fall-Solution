@@ -52,7 +52,7 @@
 52, Japchae, "Korean dish of stir-fried glass noodles and vegetables typically seasoned with soy sauce and sesame oil", 12, 73
 53, Sauerbraten, "German pot roast that can be prepared with a variety of meats traditionally marinated before cooking in a mixture of vinegar water spices and seasonings", 20, 74
 54, Pretzel, "Traditional German type of baked bread product made from dough most commonly shaped into a twisted knot", 4, 74
-55, Bratwurst, "German sausage made typically from pork the name is derived from the Old High German Brätwurst from brät- which is finely chopped meat and Wurst, or sausage", 10, 74
+55, Bratwurst, "German sausage made typically from pork the name is derived from the Old High German Brätwurst from brät- which is finely chopped meat and Wurst or sausage", 10, 74
 56, Wiener Schnitzel, "Austrian dish made from breaded and fried veal cutlet", 22, 74
 57, Apple Strudel, "Popular Austrian pastry dessert filled with apples", 12, 75
 58, Kaiserschmarrn, "Shredded pancake that has its name from the Austrian emperor Kaiser Franz Joseph I who was very fond of this kind of fluffy shredded pancake", 10, 75

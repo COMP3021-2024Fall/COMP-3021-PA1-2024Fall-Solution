@@ -2,10 +2,7 @@ package hk.ust.comp3021;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class FileTest {
@@ -94,15 +91,15 @@ public class FileTest {
 
                 dispatchSystem.dispatchFirstRound();
 
-                dispatchSystem.writeOrders("firstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", dispatchSystem.getDispatchedOrders());
-                boolean p2 = testIfFilesContentSame("firstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", "firstRoundDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
+                dispatchSystem.writeOrders("FirstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", dispatchSystem.getDispatchedOrders());
+                boolean p2 = testIfFilesContentSame("FirstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", "FirstRoundDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p2) {
                     subTotal += 50;
                 }
 
                 List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
-                dispatchSystem.writeOrders("timeoutDispatchedOrdersTest" + testCaseNumber + ".txt", timeoutOrders);
-                boolean p3 = testIfFilesContentSame("timeoutDispatchedOrdersTest" + testCaseNumber + ".txt", "timeoutDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
+                dispatchSystem.writeOrders("TimeoutDispatchedOrdersTest" + testCaseNumber + ".txt", timeoutOrders);
+                boolean p3 = testIfFilesContentSame("TimeoutDispatchedOrdersTest" + testCaseNumber + ".txt", "TimeoutDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p3) {
                     subTotal += 10;
                 }
@@ -137,14 +134,6 @@ public class FileTest {
             gradeTest1Template(6);
         }
 
-        void gradeTest7() {
-            gradeTest1Template(7);
-        }
-
-        void gradeTest8() {
-            gradeTest1Template(8);
-        }
-
     }
 
     @Test
@@ -157,8 +146,6 @@ public class FileTest {
         counter.gradeTest4();
         counter.gradeTest5();
         counter.gradeTest6();
-        counter.gradeTest7();
-        counter.gradeTest8();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -168,5 +155,124 @@ public class FileTest {
         counter.print();
     }
 
+    @Test
+    void test1() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest1();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt"))) {
+            bufferedWriter.write(counter.getTotal() + "");
+//            bufferedWriter.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    @Test
+    void test2() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest2();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
+            bufferedWriter.write(" " + counter.getTotal());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    void test3() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest3();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
+            bufferedWriter.write(" " + counter.getTotal());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    void test4() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest4();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
+            bufferedWriter.write(" " + counter.getTotal());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    void test5() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest5();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
+            bufferedWriter.write(" " + counter.getTotal());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    void test6() {
+        GradeCounter counter = new GradeCounter();
+        counter.gradeTest6();
+        counter.print();
+        System.out.println("Grade: " + counter.calculateGrade());
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
+            bufferedWriter.write(" " + counter.getTotal());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    void test7() {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("grades.txt"))) {
+            String line = bufferedReader.readLine();
+            String[] grades = line.split(" ");
+            assert grades.length == 6;
+
+            Integer[] intGrades = new Integer[grades.length];
+            for (int i = 0; i < grades.length; i++) {
+                intGrades[i] = Integer.parseInt(grades[i]);
+            }
+
+            double finalGrade = 0L;
+
+            for (int i = 0; i < intGrades.length; i++) {
+                finalGrade += intGrades[i];
+            }
+
+            finalGrade /= intGrades.length;
+
+            System.out.println("Final Grade: " + finalGrade);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

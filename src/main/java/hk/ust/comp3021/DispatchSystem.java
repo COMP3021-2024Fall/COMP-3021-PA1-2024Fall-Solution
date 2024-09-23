@@ -32,6 +32,13 @@ public class DispatchSystem {
         this.dispatchedOrders = new ArrayList<>();
     }
 
+//    // Do not modify this constructor.
+//    public DispatchSystem(int x) {
+//        this.availableOrders = new ArrayList<>();
+//        this.availableDishes = new ArrayList<>();
+//        this.dispatchedOrders = new ArrayList<>();
+//    }
+
     /// Task 1: Implement the getInstance() method for the singleton pattern.
     /// Hint: Try to make it thread-safe.
     public static DispatchSystem getInstance() {
@@ -398,17 +405,19 @@ public class DispatchSystem {
     public static void main(String[] args) {
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-            dispatchSystem.parseAccounts("Accounts2.txt");
-            dispatchSystem.parseDishes("Dishes2.txt");
-            dispatchSystem.parseOrders("Orders2.txt");
-            dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.availableOrders);
+            dispatchSystem.parseAccounts("Accounts6.txt");
+            dispatchSystem.parseDishes("Dishes6.txt");
+            dispatchSystem.parseOrders("Orders6.txt");
+            dispatchSystem.writeAccounts("AccountsTest6Oracle.txt", dispatchSystem.getAccounts());
+            dispatchSystem.writeDishes("DishesTest6Oracle.txt", dispatchSystem.availableDishes);
+            dispatchSystem.writeOrders("OrdersTest6Oracle.txt", dispatchSystem.availableOrders);
 
             dispatchSystem.dispatchFirstRound();
 
-            dispatchSystem.writeOrders("firstRoundDispatchedOrders.txt", dispatchSystem.dispatchedOrders);
+            dispatchSystem.writeOrders("FirstRoundDispatchedOrdersTest6Oracle.txt", dispatchSystem.dispatchedOrders);
             List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
 
-            dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
+            dispatchSystem.writeOrders("TimeoutDispatchedOrdersTest6Oracle.txt", timeoutOrders);
 
         } catch (IOException exception) {
             exception.printStackTrace();

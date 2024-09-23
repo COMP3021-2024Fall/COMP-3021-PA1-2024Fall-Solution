@@ -405,19 +405,18 @@ public class DispatchSystem {
     public static void main(String[] args) {
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
-            dispatchSystem.parseAccounts("Accounts6.txt");
-            dispatchSystem.parseDishes("Dishes6.txt");
-            dispatchSystem.parseOrders("Orders6.txt");
-            dispatchSystem.writeAccounts("AccountsTest6Oracle.txt", dispatchSystem.getAccounts());
-            dispatchSystem.writeDishes("DishesTest6Oracle.txt", dispatchSystem.availableDishes);
-            dispatchSystem.writeOrders("OrdersTest6Oracle.txt", dispatchSystem.availableOrders);
+
+            dispatchSystem.parseAccounts("Accounts.txt");
+            dispatchSystem.parseDishes("Dishes.txt");
+            dispatchSystem.parseOrders("Orders.txt");
+            dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.availableOrders);
 
             dispatchSystem.dispatchFirstRound();
+            dispatchSystem.writeOrders("firstRoundDispatchedOrders.txt", dispatchSystem.dispatchedOrders);
 
-            dispatchSystem.writeOrders("FirstRoundDispatchedOrdersTest6Oracle.txt", dispatchSystem.dispatchedOrders);
             List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
 
-            dispatchSystem.writeOrders("TimeoutDispatchedOrdersTest6Oracle.txt", timeoutOrders);
+            dispatchSystem.writeOrders("timeoutDispatchedOrders.txt", timeoutOrders);
 
         } catch (IOException exception) {
             exception.printStackTrace();

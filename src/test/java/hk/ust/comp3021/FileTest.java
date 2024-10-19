@@ -48,6 +48,12 @@ public class FileTest {
                     }
                 }
 
+                if (same && reader1.readLine() == null) {
+                    if (reader2.readLine() != null) {
+                        same = false;
+                    }
+                }
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

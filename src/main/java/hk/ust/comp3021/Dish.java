@@ -16,4 +16,15 @@ public class Dish {
 
     private Long restaurantId;
 
+    @Override
+    public String toString() {
+        return "Dish(" +
+                "id=" + id +
+                ", name=" + name +
+                ", desc=" + desc +
+                ", price=" + price.setScale(2) +
+                ", restaurantId=" + restaurantId +
+                ')';
+    }
+
 }

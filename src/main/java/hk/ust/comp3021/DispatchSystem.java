@@ -371,7 +371,7 @@ public class DispatchSystem {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
             for (Dish dish : orderedDishes) {
                 bufferedWriter.write(dish.getId() + ", " + dish.getName() + ", " + dish.getDesc() + ", "
-                        + dish.getPrice() + ", " + dish.getRestaurantId() + "\n");
+                        + dish.getPrice().setScale(2) + ", " + dish.getRestaurantId() + "\n");
             }
         }
     }

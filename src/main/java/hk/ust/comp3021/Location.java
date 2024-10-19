@@ -21,4 +21,12 @@ public class Location {
         return Math.sqrt(Math.pow(location1.latitude - location2.latitude, 2) + Math.pow(location1.altitude - location2.altitude, 2));
     }
 
+    @Override
+    public String toString() {
+        return "Location(" +
+                "latitude=" + String.format("%.1f", latitude) +
+                ", altitude=" + String.format("%.1f", altitude) +
+                ')';
+    }
+
 }

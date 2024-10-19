@@ -406,9 +406,9 @@ public class DispatchSystem {
         try {
             DispatchSystem dispatchSystem = DispatchSystem.getInstance();
 
-            dispatchSystem.parseAccounts("Accounts.txt");
-            dispatchSystem.parseDishes("Dishes.txt");
-            dispatchSystem.parseOrders("Orders.txt");
+            dispatchSystem.parseAccounts("SampleInputAccounts.txt");
+            dispatchSystem.parseDishes("SampleInputDishes.txt");
+            dispatchSystem.parseOrders("SampleInputOrders.txt");
             dispatchSystem.writeOrders("availableOrders.txt", dispatchSystem.availableOrders);
 
             dispatchSystem.dispatchFirstRound();

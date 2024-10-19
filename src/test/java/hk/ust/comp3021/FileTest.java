@@ -62,7 +62,6 @@ public class FileTest {
         }
 
         void gradeTest1Template(int testCaseNumber) {
-            int subTotal = 0;
             try {
                 DispatchSystem dispatchSystem = DispatchSystem.getInstance();
                 dispatchSystem.parseAccounts("Accounts" + testCaseNumber + ".txt");
@@ -72,21 +71,21 @@ public class FileTest {
                 dispatchSystem.writeAccounts("AccountsTest" + testCaseNumber + ".txt", allAccounts);
                 boolean p11 = testIfFilesContentSame("AccountsTest" + testCaseNumber + ".txt", "AccountsTest" + testCaseNumber + "Oracle.txt");
                 if (p11) {
-                    subTotal += 20;
+                    addTotal(20);
                 }
 
                 List<Dish> allDishes = dispatchSystem.getDishes();
                 dispatchSystem.writeDishes("DishesTest" + testCaseNumber + ".txt", allDishes);
                 boolean b12 = testIfFilesContentSame("DishesTest" + testCaseNumber + ".txt", "DishesTest" + testCaseNumber + "Oracle.txt");
                 if (b12) {
-                    subTotal += 10;
+                    addTotal(10);
                 }
 
                 List<Order> allOrders = dispatchSystem.getAvailableOrders();
                 dispatchSystem.writeOrders("OrdersTest" + testCaseNumber + ".txt", allOrders);
                 boolean b13 = testIfFilesContentSame("OrdersTest" + testCaseNumber + ".txt", "OrdersTest" + testCaseNumber + "Oracle.txt");
                 if (b13) {
-                    subTotal += 10;
+                    addTotal(10);
                 }
 
                 dispatchSystem.dispatchFirstRound();
@@ -94,17 +93,16 @@ public class FileTest {
                 dispatchSystem.writeOrders("FirstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", dispatchSystem.getDispatchedOrders());
                 boolean p2 = testIfFilesContentSame("FirstRoundDispatchedOrdersTest" + testCaseNumber + ".txt", "FirstRoundDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p2) {
-                    subTotal += 50;
+                    addTotal(50);
                 }
 
                 List<Order> timeoutOrders = dispatchSystem.getTimeoutDispatchedOrders();
                 dispatchSystem.writeOrders("TimeoutDispatchedOrdersTest" + testCaseNumber + ".txt", timeoutOrders);
                 boolean p3 = testIfFilesContentSame("TimeoutDispatchedOrdersTest" + testCaseNumber + ".txt", "TimeoutDispatchedOrdersTest" + testCaseNumber + "Oracle.txt");
                 if (p3) {
-                    subTotal += 10;
+                    addTotal(10);
                 }
 
-                addTotal(subTotal);
             } catch (IOException exception) {
                 exception.printStackTrace();
             }
@@ -140,12 +138,12 @@ public class FileTest {
     void generalGradeTest() {
         GradeCounter counter = new GradeCounter();
         try {
-        counter.gradeTest1();
-        counter.gradeTest2();
-        counter.gradeTest3();
-        counter.gradeTest4();
-        counter.gradeTest5();
-        counter.gradeTest6();
+            counter.gradeTest1();
+            counter.gradeTest2();
+            counter.gradeTest3();
+            counter.gradeTest4();
+            counter.gradeTest5();
+            counter.gradeTest6();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -158,9 +156,13 @@ public class FileTest {
     @Test
     void test1() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest1();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try {
+            counter.gradeTest1();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt"))) {
             bufferedWriter.write(counter.getTotal() + "");
@@ -175,9 +177,13 @@ public class FileTest {
     @Test
     void test2() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest2();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try {
+            counter.gradeTest2();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
             bufferedWriter.write(" " + counter.getTotal());
@@ -190,9 +196,13 @@ public class FileTest {
     @Test
     void test3() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest3();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try {
+            counter.gradeTest3();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
             bufferedWriter.write(" " + counter.getTotal());
@@ -205,9 +215,13 @@ public class FileTest {
     @Test
     void test4() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest4();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try{
+            counter.gradeTest4();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
             bufferedWriter.write(" " + counter.getTotal());
@@ -220,9 +234,13 @@ public class FileTest {
     @Test
     void test5() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest5();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try {
+            counter.gradeTest5();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
             bufferedWriter.write(" " + counter.getTotal());
@@ -235,9 +253,13 @@ public class FileTest {
     @Test
     void test6() {
         GradeCounter counter = new GradeCounter();
-        counter.gradeTest6();
-        counter.print();
-        System.out.println("Grade: " + counter.calculateGrade());
+        try {
+            counter.gradeTest6();
+            counter.print();
+            System.out.println("Grade: " + counter.calculateGrade());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt", true))) {
             bufferedWriter.write(" " + counter.getTotal());

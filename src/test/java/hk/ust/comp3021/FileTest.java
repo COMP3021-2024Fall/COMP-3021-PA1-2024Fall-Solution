@@ -141,25 +141,6 @@ public class FileTest {
     }
 
     @Test
-    void generalGradeTest() {
-        GradeCounter counter = new GradeCounter();
-        try {
-            counter.gradeTest1();
-            counter.gradeTest2();
-            counter.gradeTest3();
-            counter.gradeTest4();
-            counter.gradeTest5();
-            counter.gradeTest6();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Grade: " + counter.calculateGrade());
-
-        counter.print();
-    }
-
-    @Test
     void test1() {
         GradeCounter counter = new GradeCounter();
         try {
@@ -172,13 +153,11 @@ public class FileTest {
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("grades.txt"))) {
             bufferedWriter.write(counter.getTotal() + "");
-//            bufferedWriter.newLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
 
     @Test
     void test2() {

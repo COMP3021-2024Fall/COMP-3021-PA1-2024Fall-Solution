@@ -1,0 +1,200 @@
+1, Chicken Parmesan, "Breaded chicken breast topped with tomato sauce and mozzarella", 24.00, 51
+2, Fettuccine Alfredo, "Creamy pasta dish made with butter and parmesan cheese", 18.00, 51
+3, Caesar Salad, "Romaine lettuce with croutons dressed with lemon juice olive oil and Parmesan cheese", 12.00, 51
+4, Minestrone Soup, "Thick Italian soup made with vegetables beans and pasta", 10.00, 51
+5, Paella, "Spanish rice dish with seafood and saffron", 30.00, 52
+6, Tapas, "Variety of appetizers or snacks in Spanish cuisine", 15.00, 52
+7, Gazpacho, "Cold tomato-based raw vegetable soup from Spain", 12.00, 52
+8, Churros, "Fried dough pastry served with chocolate dipping sauce", 8.00, 52
+9, Beef Stroganoff, "Russian dish of sautéed pieces of beef in a sour cream sauce", 22.00, 53
+10, Borscht, "Sour soup made with beetroot as the main ingredient from Eastern Europe", 16.00, 53
+11, Pelmeni, "Dumplings of Russian origin filled with minced meat", 14.00, 53
+12, Blini, "Thin pancakes from Russia served with sour cream", 9.00, 53
+13, Sushi, "Japanese dish of vinegared rice with various toppings particularly seafood", 25.00, 54
+14, Ramen, "Japanese noodle soup with meat or fish broth flavored with soy or miso", 18.00, 54
+15, Tempura, "Japanese dish of seafood or vegetables that have been battered and deep fried", 15.00, 54
+16, Miso Soup, "Traditional Japanese soup consisting of a stock called dashi into which miso paste is mixed", 7.00, 54
+17, Tandoori Chicken, "Indian dish consisting of roasted chicken marinated in yogurt and spices", 20.00, 55
+18, Biryani, "Indian mixed rice dish with spices and usually with meat or vegetables", 22.00, 55
+19, Samosa, "Fried or baked pastry with a savory filling such as spiced potatoes", 5.00, 55
+20, Butter Chicken, "Dish of chicken in a mildly spiced curry sauce", 18.00, 55
+21, Moussaka, "Greek eggplant and potato casserole with ground lamb", 24.00, 56
+22, Souvlaki, "Popular Greek fast food consisting of small pieces of meat and sometimes vegetables grilled on a skewer", 15.00, 56
+23, Spanakopita, "Greek savory pastry filled with spinach feta cheese onions and seasoning", 12.00, 56
+24, Greek Salad, "Salad with tomatoes cucumbers onion feta cheese and olives typically seasoned with salt and oregano", 10.00, 56
+25, Pho, "Vietnamese noodle soup with broth herbs meat usually beef and sometimes chicken", 14.00, 57
+26, Banh Mi, "Vietnamese sandwich consisting of a baguette filled with a variety of ingredients including meat and vegetables", 12.00, 57
+27, Goi Cuon, "Vietnamese spring roll with pork shrimp herbs rice vermicelli and other ingredients wrapped in Vietnamese rice paper", 10.00, 57
+28, Bun Bo Hue, "Spicy Vietnamese beef noodle soup", 15.00, 57
+29, Jerk Chicken, "Spicy chicken dish from Jamaica", 18.00, 58
+30, Curry Goat, "Jamaican curry dish made with goat meat and spices", 20.00, 58
+31, Ackee and Saltfish, "National dish of Jamaica made from the local fruit ackee and dried and salted cod", 22.00, 58
+32, Festival, "Sweet fried cornmeal dumplings from Jamaica served as a side dish", 5.00, 58
+33, Ravioli, "Type of pasta comprising a filling enveloped in thin pasta dough", 16.00, 59
+34, Lasagna, "Layered pasta dish made with alternating layers of pasta sauce cheese and meat or vegetables", 22.00, 59
+35, Tiramisu, "Coffee-flavored Italian dessert made of ladyfingers dipped in coffee layered with a whipped mixture of eggs sugar and mascarpone cheese", 15.00, 59
+36, Gelato, "Italian style of ice cream known for its rich texture and intense flavor", 10.00, 59
+37, Beef Wellington, "Preparation of filet steak coated with pâté and duxelles wrapped in puff pastry then baked", 35.00, 60
+38, Fish and Chips, "Traditional British hot dish consisting of fried fish in batter served with chips", 12.00, 60
+39, Shepherd's Pie, "British meat pie with a crust of mashed potato", 18.00, 60
+40, Sticky Toffee Pudding, "English dessert consisting of a moist sponge cake made with finely chopped dates covered in a toffee sauce", 10.00, 60
+41, Goulash, "Hungarian stew of meat and vegetables seasoned with paprika and other spices", 25.00, 61
+42, Chicken Paprikash, "Hungarian dish of chicken stewed in paprika sauce with sour cream", 20.00, 61
+43, Langos, "Hungarian fried bread usually served with sour cream and grated cheese", 8.00, 61
+44, Dobos Torte, "Hungarian layered sponge cake filled with chocolate buttercream and topped with caramel", 15.00, 61
+45, Bruschetta, "Italian starter dish consisting of grilled bread rubbed with garlic and topped with olive oil and salt", 10.00, 62
+46, Focaccia, "Flat oven-baked Italian bread product similar in style and texture to pizza doughs", 12.00, 62
+47, Arancini, "Italian stuffed rice balls which are coated with bread crumbs and then deep fried", 14.00, 62
+48, Polenta, "Dish of boiled cornmeal that was historically made from other grains", 9.00, 62
+49, Falafel, "Deep-fried ball made from ground chickpeas commonly served in a pita", 7.00, 63
+50, Shawarma, "Middle Eastern meat preparation where lamb chicken or turkey is marinated and stacked in a cone-like shape", 13.00, 63
+51, Hummus, "Spread made from cooked mashed chickpeas or other beans blended with tahini olive oil lemon juice salt and garlic", 6.00, 63
+52, Baba Ganoush, "Levantine appetizer of mashed cooked eggplant mixed with tahini olive oil possibly lemon juice and various seasonings", 10.00, 63
+53, Kebab, "Dish of pieces of meat fish or vegetables roasted or grilled on a skewer or spit originating from the Middle East", 12.00, 64
+54, Baklava, "Rich sweet dessert pastry made of layers of filo filled with chopped nuts and sweetened with syrup or honey", 10.00, 64
+55, Dolma, "Cooked dish made from vine leaves stuffed with a rice mixture", 11.00, 64
+56, Turkish Delight, "Family of confections based on a gel of starch and sugar premium varieties consist largely of chopped dates pistachios and hazelnuts or walnuts", 8.00, 64
+57, Pierogi, "Filled dumplings of Central European origin made by wrapping unleavened dough around a savory or sweet filling and cooking in boiling water", 9.00, 65
+58, Kielbasa, "Umbrella term for any type of meat sausage from Poland and a staple of Polish cuisine", 14.00, 65
+59, Bigos, "Polish dish of chopped meat of various kinds stewed with sauerkraut and shredded fresh cabbage", 12.00, 65
+60, Zurek, "Sour rye soup with sausages traditionally served in Poland before the main Easter meal", 10.00, 65
+61, Nasi Goreng, "Indonesian fried rice dish cooked with pieces of meat and vegetables", 12.00, 66
+62, Satay, "Southeast Asian dish of seasoned skewered and grilled meat served with a sauce", 14.00, 66
+63, Gado-Gado, "Indonesian salad of boiled vegetables and hard-boiled eggs fried tofu and tempeh served with a peanut sauce dressing", 11.00, 66
+64, Rendang, "Slow-cooked Indonesian meat dish which originated from the Minangkabau region in West Sumatra", 18.00, 66
+65, Croissant, "French buttery flaky viennoiserie pastry named for its historical crescent shape", 5.00, 67
+66, French Onion Soup, "French dish based on meat stock and onions served gratinéed with cheese on top", 12.00, 67
+67, Boeuf Bourguignon, "Beef stewed in red wine often red Burgundy and beef broth typically flavored with carrots onions garlic and a bouquet garni with pearl onions and mushrooms", 24.00, 67
+68, Quiche, "French tart consisting of pastry crust filled with savoury custard and pieces of cheese meat seafood or vegetables", 16.00, 67
+69, Cannoli, "Italian pastry originating from Sicily consisting of tube-shaped shells of fried pastry dough filled with a sweet creamy filling usually containing ricotta", 10.00, 68
+70, Risotto, "Northern Italian rice dish cooked with broth until it reaches a creamy consistency", 22.00, 68
+71, Tiramisu, "Coffee-flavoured Italian dessert made of ladyfingers dipped in coffee layered with a whipped mixture of eggs sugar and mascarpone cheese flavoured with cocoa", 15.00, 68
+72, Carbonara, "Italian pasta dish from Rome made with egg hard cheese cured pork and black pepper", 18.00, 68
+73, Ramen, "Japanese noodle soup it consists of Chinese-style wheat noodles served in a meat-based broth often flavored with soy sauce or miso and uses toppings such as sliced pork nori menma and scallions", 12.00, 69
+74, Sushi, "Japanese dish of prepared vinegared rice accompanying a variety of ingredients such as seafood vegetables and occasionally tropical fruits", 20.00, 69
+75, Tempura, "Japanese dish usually consisting of seafood or vegetables that have been battered and deep fried", 15.00, 69
+76, Udon, "Type of thick wheat flour noodle used frequently in Japanese cuisine", 14.00, 69
+77, Empanadas, "Stuffed bread or pastry baked or fried in many countries of Latin America", 8.00, 70
+78, Lomo Saltado, "Traditional Peruvian dish a stir fry that typically combines marinated strips of sirloin with onions tomatoes and other ingredients served with fried potato slices", 18.00, 70
+79, Ceviche, "Seafood dish popular in the coastal regions of Latin America and the Caribbean", 20.00, 70
+80, Aji de Gallina, "Peruvian chicken stew made with cream nuts and cheese", 14.00, 70
+81, Dosa, "A type of pancake from the Indian subcontinent made from a fermented batter predominantly consisting of lentils and rice", 10.00, 71
+82, Idli, "Type of savoury rice cake originating from the Indian subcontinent popular as breakfast foods in southern India and among Tamils in Sri Lanka", 6.00, 71
+83, Vindaloo, "Indian curry dish popular in the region of Goa", 18.00, 71
+84, Palak Paneer, "Indian dish of paneer cheese in a thick paste made from puréed spinach and seasoned with garlic garam masala and other spices", 12.00, 71
+85, Bangers and Mash, "Traditional British dish made of mashed potatoes and sausages", 14.00, 72
+86, Fish and Chips, "Hot dish of English origin consisting of fried battered fish and hot potato chips", 12.00, 72
+87, Beef Wellington, "Preparation of filet steak coated with pâté and duxelles which is then wrapped in puff pastry and baked", 30.00, 72
+88, Sunday Roast, "British main meal that is typically served on Sunday", 25.00, 72
+89, Belgian Waffles, "Variety of waffle with a lighter batter larger squares and deeper pockets than ordinary American waffles", 8.00, 73
+90, Moules-frites, "Main dish of mussels and fries originating in Belgium", 18.00, 73
+91, Carbonnade flamande, "Traditional Belgian beef and onion stew made with beer", 20.00, 73
+92, Waterzooi, "Belgian stew of fish or chicken with vegetables", 22.00, 73
+93, Schwarzwälder Kirschtorte, "German cake known in English as Black Forest cherry-torte", 16.00, 74
+94, Pretzel, "Type of baked bread product made from dough most commonly shaped into a twisted knot", 4.00, 74
+95, Sauerbraten, "German pot roast that can be prepared with a variety of meats", 18.00, 74
+96, Schnitzel, "Breaded cutlet dish made with boneless meat thinned with a mallet coated with flour beaten eggs and bread crumbs then fried", 20.00, 74
+97, Gado-Gado, "Indonesian salad of slightly boiled blanched or steamed vegetables and hard-boiled eggs boiled potato fried tofu and tempeh served with a peanut sauce dressing", 12.00, 75
+98, Satay, "Indonesian dish of seasoned skewered and grilled meat served with a sauce", 15.00, 75
+99, Nasi Goreng, "Indonesian rice dish typically cooked with pieces of meat and vegetables", 10.00, 75
+100, Bakso, "Indonesian meatball or meat paste made from beef surimi", 8.00, 75
+101, Ravioli, "Type of pasta comprising a filling enveloped in thin pasta dough", 14.00, 76
+102, Polenta, "Dish of boiled cornmeal that was historically made from other grains", 9.00, 76
+103, Osso Buco, "Italian specialty of cross-cut veal shanks braised with vegetables white wine and broth", 25.00, 76
+104, Caprese Salad, "Simple Italian salad from Campania made from mozzarella cheese tomatoes and basil", 12.00, 76
+105, Kimchi, "Traditional Korean side dish of salted and fermented vegetables such as napa cabbage and Korean radish", 7.00, 77
+106, Bulgogi, "Korean dish of marinated beef cooked using traditional grilling techniques", 18.00, 77
+107, Bibimbap, "Korean rice dish with assorted mixtures of sautéed and seasoned vegetables", 16.00, 77
+108, Japchae, "Korean dish made from sweet potato noodles stir fried in sesame oil with vegetables", 14.00, 77
+109, Currywurst, "German fast food dish consisting of steamed then fried pork sausage typically cut into slices and seasoned with curry ketchup", 10.00, 78
+110, Bratwurst, "Sausage usually composed of veal beef or pork", 12.00, 78
+111, Kartoffelsalat, "German potato salad different from American versions because it's typically made with vinegar or oil but not mayonnaise", 9.00, 78
+112, Königsberger Klopse, "German dish of meatballs in a white sauce with capers", 14.00, 78
+113, Moussaka, "Greek dish made with layers of eggplant minced meat and béchamel sauce then baked to golden perfection", 22.00, 79
+114, Gyro, "Dish made from meat cooked on a vertical rotisserie traditionally pork in Greece", 12.00, 79
+115, Spanakopita, "Greek spinach pie with a flaky phyllo pastry crust", 10.00, 79
+116, Horta Vrasta, "Traditional Greek dish of boiled greens usually served with olive oil and lemon", 8.00, 79
+117, Croissant, "Buttery flaky viennoiserie pastry of Austrian origin but associated with France", 6.00, 80
+118, Quiche, "French tart consisting of pastry crust filled with savoury custard and pieces of cheese meat seafood or vegetables", 15.00, 80
+119, Ratatouille, "French Provençal stewed vegetable dish from Nice", 18.00, 80
+120, Foie Gras, "Luxury food product made of the liver of a duck or goose that has been specially fattened", 35.00, 80
+121, Chili Con Carne, "Spicy stew containing chili peppers meat and often tomatoes and beans", 14.00, 81
+122, Barbecue Ribs, "Dish of pork or beef ribs cooked with a sweet and spicy sauce", 22.00, 81
+123, Cornbread, "Type of bread made from cornmeal baked into a thick dense bread usually sweetened", 8.00, 81
+124, Jambalaya, "Louisiana-origin dish of Spanish and French influence consisting of meat and vegetables mixed with rice", 18.00, 81
+125, Tandoori Chicken, "Indian dish consisting of roasted chicken prepared with yogurt and spices", 16.00, 82
+126, Rogan Josh, "Aromatic curry dish hailing from Kashmir and made with braised lamb chunks cooked with a gravy based on browned onions or shallots yogurt garlic ginger and aromatic spices", 20.00, 82
+127, Naan, "Soft and pillowy Indian flatbread baked in a clay oven", 3.00, 82
+128, Dal Makhani, "Dish of lentils and beans slow-cooked with cream tomatoes and spices", 12.00, 82
+129, Caesar Salad, "Salad of romaine lettuce and croutons dressed with lemon juice olive oil egg Worcestershire sauce anchovies garlic Dijon mustard Parmesan cheese and black pepper", 12.00, 83
+130, Lobster Bisque, "French soup based on a strained broth of lobster shells", 22.00, 83
+131, Beef Bourguignon, "French beef stew prepared with beef braised in red wine and beef broth typically flavored with carrots onions garlic and a bouquet garni with pearl onions and mushrooms", 28.00, 83
+132, Baguette, "Long thin loaf of French bread that is commonly made from basic lean dough", 3.00, 83
+133, Spaghetti Carbonara, "Italian pasta dish from Rome made with egg cheese guanciale and black pepper", 14.00, 84
+134, Risotto, "North Italian rice dish cooked with broth until it reaches a creamy consistency", 16.00, 84
+135, Focaccia, "Flat oven-baked Italian bread product similar in style and texture to pizza dough", 8.00, 84
+136, Tiramisu, "Coffee-flavored Italian dessert made of ladyfingers dipped in coffee layered with a whipped mixture of eggs sugar and mascarpone cheese flavored with cocoa", 12.00, 84
+137, Sushi, "Japanese dish consisting of prepared vinegared rice accompanying a variety of ingredients such as seafood vegetables and occasionally tropical fruits", 25.00, 85
+138, Sashimi, "Japanese delicacy consisting of very fresh raw fish or meat sliced into thin pieces and often eaten with soy sauce", 20.00, 85
+139, Ramen, "Japanese noodle soup with broth typically based on chicken or pork stock with various toppings", 12.00, 85
+140, Mochi, "Japanese rice cake made of mochigome pounded into paste and molded into shape", 8.00, 85
+141, Empanadas, "Stuffed bread or pastry baked or fried in many countries of Latin America", 8.00, 86
+142, Lomo Saltado, "Traditional Peruvian dish a stir fry that typically combines marinated strips of sirloin with onions tomatoes and fries", 18.00, 86
+143, Ceviche, "Seafood dish popular in the coastal regions of Latin America and the Caribbean", 20.00, 86
+144, Aji de Gallina, "Peruvian chicken stew made with cream nuts and cheese", 14.00, 86
+145, Wiener Schnitzel, "Austrian dish consisting of breaded and fried veal cutlets", 20.00, 87
+146, Sacher Torte, "Famous Viennese chocolate cake invented by Franz Sacher", 18.00, 87
+147, Apple Strudel, "Traditional Viennese strudel a pastry jacket with a sweet apple filling", 14.00, 87
+148, Knödel, "Boiled dumpling commonly found in Central and East European cuisine", 10.00, 87
+149, Tandoori Chicken, "Indian dish consisting of roasted chicken prepared with yogurt and spices", 16.00, 88
+150, Naan, "Oven-baked flatbread found in the cuisines of Central and South Asia", 3.00, 88
+151, Dal Makhani, "Dish originating from the Punjab region of the Indian subcontinent made from whole black lentil red kidney beans butter and cream", 12.00, 88
+152, Lassi, "Traditional yogurt-based drink from the Indian subcontinent and originated in the Punjab region", 5.00, 88
+153, Paella, "Valencian rice dish that has ancient roots but its modern form originated in the mid-19th century near lake Albufera a lagoon in Valencia on the east coast of Spain", 22.00, 89
+154, Gazpacho, "Cold Spanish tomato-based raw vegetable soup", 7.00, 89
+155, Churro, "Fried-dough pastry predominantly choux based snack", 4.00, 89
+156, Tortilla Española, "Typical Spanish dish consisting of a thick egg omelette made with potatoes and fried in olive oil", 9.00, 89
+157, Peking Duck, "Dish from Beijing that has been prepared since the Imperial era and is now considered one of China's national foods", 35.00, 90
+158, Dim Sum, "Style of Chinese cuisine prepared as small bite-sized portions of food served in small steamer baskets or on a small plate", 12.00, 90
+159, Hot Pot, "Cooking method that comes from China consisting of a simmering pot of soup stock at the dining table containing a variety of East Asian foodstuffs and ingredients", 18.00, 90
+160, Mapo Tofu, "Popular Chinese dish from Sichuan province it consists of tofu set in a spicy sauce typically a thin oily and bright red suspension based on douban and douchi along with minced meat usually pork or beef", 10.00, 90
+161, Baked Ziti, "Pasta dish made from ziti macaroni and sauce characteristic of Italian-American cuisine", 14.00, 91
+162, Chicken Parmesan, "Dish that consists of breaded chicken breast covered in tomato sauce and mozzarella parmesan or provolone cheese", 19.00, 91
+163, Fettuccine Alfredo, "Pasta dish made from fettuccine tossed with butter and Parmesan cheese", 13.00, 91
+164, Cannoli, "Sicilian pastry dessert the singular is cannolo meaning little tube with the origin laying in the Palermo and Messina areas and traditionally consists of tube-shaped shells of fried pastry dough filled with a sweet creamy filling usually containing ricotta", 8.00, 91
+165, Jerk Chicken, "Spicy grilled-meat dish most associated with Jamaica but common throughout the Caribbean", 18.00, 92
+166, Ropa Vieja, "One of the national dishes of Cuba but also popular in other areas of the Caribbean such as Puerto Rico and Panama", 16.00, 92
+167, Cuban Sandwich, "Type of sandwich that originated in cafes catering to Cuban workers in the early Cuban immigrant communities of Florida especially Key West and Ybor City Tampa", 12.00, 92
+168, Plantain Chips, "Thin slices of plantain deep-fried or dried to create a crispy snack food", 5.00, 92
+169, Massaman Curry, "Thai curry that is an interpretation of a Persian dish", 18.00, 93
+170, Thai Basil Chicken, "Highly popular Thai dish that is quick to prepare and very tasty featuring chicken cooked with Thai basil and chili", 16.00, 93
+171, Tom Kha Gai, "Thai chicken coconut soup that combines coconut milk with Thai ginger galangal lemongrass and fresh chilis", 14.00, 93
+172, Thai Fried Rice, "Version of fried rice typical of central Thai cuisine", 12.00, 93
+173, Beef Bulgogi, "Korean-style grilled and marinated beef", 20.00, 94
+174, Kimchi Jjigae, "Korean stew made with kimchi and other ingredients such as scallions onions diced tofu pork and seafood", 16.00, 94
+175, Gimbap, "Korean dish made from cooked rice and other ingredients that are rolled in gim—dried sheets of seaweed—and served in bite-sized slices", 12.00, 94
+176, Bibimbap, "Korean rice dish topped with an array of vegetables and chili pepper paste", 14.00, 94
+177, Schnitzel, "Austrian breaded cutlet dish made from veal pork chicken or turkey", 20.00, 95
+178, Apple Strudel, "Traditional Viennese strudel a pastry filled with apples", 10.00, 95
+179, Viennese Coffee, "Coffee drink made from espresso and whipped cream", 7.00, 95
+180, Austrian Goulash, "Thick beef stew flavored with onions and spices including paprika", 18.00, 95
+181, Tikka Masala, "Dish of chunks of roasted marinated meat like chicken in a spiced curry sauce", 22.00, 96
+182, Lamb Vindaloo, "Indian curry dish based on the Portuguese carne de vinha d'alhos which is a dish of meat usually pork with wine and garlic", 18.00, 96
+183, Palak Paneer, "Indian dish prepared with spinach and paneer cheese seasoned with garlic garam masala and other spices", 14.00, 96
+184, Chana Masala, "Dish originating from the Indian subcontinent the main ingredient is a variety of chickpea called chana or kala chana", 12.00, 96
+185, Amok, "Cambodian steamed curry that is cooked with coconut milk and wrapped in banana leaves", 15.00, 97
+186, Loc Lac, "Cambodian beef dish that features stir-fried beef cubes served with lime dipping sauce", 18.00, 97
+187, Lap Khmer, "Lime-marinated Cambodian beef salad that features thinly sliced beef that is either quickly seared or "cured" by marinating with lime juice", 16.00, 97
+188, Bai Sach Chrouk, "Popular Cambodian breakfast dish consisting of pork marinated in coconut milk and garlic served with rice", 10.00, 97
+189, Singapore Noodles, "Dish of stir-fried rice vermicelli seasoned with curry powder vegetables scrambled eggs and meat most commonly chicken beef shrimp or char siu", 14.00, 98
+190, Laksa, "Spicy noodle soup popular in the Peranakan cuisine of Southeast Asia", 12.00, 98
+191, Hainanese Chicken Rice, "Dish of poached chicken and seasoned rice served with chili sauce and usually with cucumber garnishes", 11.00, 98
+192, Chilli Crab, "Seafood dish originating from Singapore involving stir-fried crab coated with sweet savoury and spicy tomato based sauce", 20.00, 98
+193, Sfiha, "Open Middle Eastern baked pie that resembles a pizza topped with ingredients such as beef lamb cheese or spinach", 10.00, 99
+194, Kibbeh, "Levantine dish made of bulgur minced onions and finely ground lean beef lamb goat or camel meat with Middle Eastern spices", 12.00, 99
+195, Falafel, "Deep-fried ball doughnut or patty made from ground chickpeas fava beans or both", 5.00, 99
+196, Tabouleh, "Levantine vegetarian salad made mostly of finely chopped parsley with tomatoes mint bulgur and onion seasoned with olive oil lemon juice and salt", 8.00, 99
+197, Pupusas, "Traditional Salvadoran dish of a thick corn tortilla stuffed with a savory filling", 6.00, 100
+198, Tamales, "Traditional Mesoamerican dish made of masa or dough which is steamed in a corn husk or banana leaf", 12.00, 100
+199, Ceviche, "Seafood dish typically made from fresh raw fish cured in fresh citrus juices most commonly lemon or lime and spiced with ají or chili peppers", 15.00, 100
+200, Ropa Vieja, "Cuban dish consisting of shredded beef slow-cooked with tomatoes bell peppers and a mix of spices", 18.00, 100
